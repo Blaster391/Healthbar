@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerScript : ITickable
 {
+    public delegate void PlayerDamaged(int damage);
+    public event PlayerDamaged OnPlayerDamaged;
+    public delegate void PlayerKilled();
+    public event PlayerKilled OnPlayerKilled;
+
     [SerializeField]
     private string _playerName = "";
     public string PlayerName { get { return _playerName; } }
@@ -15,6 +20,7 @@ public class PlayerScript : ITickable
 
     private int _blockTimer = 0;
     private int _blockStrength = 1;
+    public int BlockStrength => _blockStrength;
 
     public bool IsBlocking()
     {
@@ -45,15 +51,21 @@ public class PlayerScript : ITickable
         if (IsBlocking())
         {
             damage -= _blockStrength;
+            if(damage < 0)
+            {
+                damage = 0;
+            }
         }
 
         _currentHealth -= damage;
+        OnPlayerDamaged?.Invoke(damage);
         Debug.Log("Player damaged by " + damage);
         if (_currentHealth < 0)
         {
             _currentHealth = 0;
             Debug.Log("Player ded");
             GameMaster.Find<GameMaster>().GameOver();
+            OnPlayerKilled?.Invoke();
         }
         //TODO raise eventy
     }

@@ -75,7 +75,10 @@ public class ActionController : ITickable
         }
         else
         {
-
+            foreach (var action in _actions)
+            {
+                action.PutOnCooldown();
+            }
         }
     }
 

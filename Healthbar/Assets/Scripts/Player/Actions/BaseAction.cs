@@ -45,12 +45,12 @@ public abstract class BaseAction : ScriptableObject
 
     public void Trigger()
     {
-        if (!IsActive())
+        if (IsActive())
         {
-            return;
+            TriggerCore();
         }
 
-        TriggerCore();
+        
         PutOnCooldown();
     }
 
@@ -61,7 +61,7 @@ public abstract class BaseAction : ScriptableObject
 
     public void PutOnCooldown()
     {
-        _currentTime = _cooldown;
+        _currentTime = _cooldown + 1;
     }
 
     protected abstract void TriggerCore();

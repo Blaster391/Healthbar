@@ -5,6 +5,13 @@ using UnityEngine;
 public class EnemyScript : ITickable
 {
 
+    public delegate void EnemyDamaged(int damage);
+    public event EnemyDamaged OnEnemyDamaged;
+    public delegate void EnemyKilled();
+    public event EnemyKilled OnEnemyKilled;
+    public delegate void EnemySpawned();
+    public event EnemySpawned OnEnemySpawned;
+
     private PlayerScript _player;
 
     private EnemyObject _baseEnemy;
@@ -29,15 +36,20 @@ public class EnemyScript : ITickable
         _baseEnemy = enemy;
         enemy.ParseAttackPattern();
         _currentHealth = enemy.MaxHealth;
+        OnEnemySpawned?.Invoke();
     }
 
     public void TakeDamage(int damage)
     {
         _currentHealth -= damage;
+
+        OnEnemyDamaged?.Invoke(damage);
         if(_currentHealth < 0)
         {
             _currentHealth = 0;
+            OnEnemyKilled?.Invoke();
             Debug.Log("Am ded");
+            
         }
         //TODO raise eventy
     }

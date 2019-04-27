@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 816891243}
   - component: {fileID: 816891244}
   - component: {fileID: 816891245}
+  - component: {fileID: 4739046530487388136}
+  - component: {fileID: 3425357358453707824}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -47,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f05fc30eae6bb4e9464e73fd69b0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerName: Cthulu Lad
 --- !u!114 &816891241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,6 +62,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc4fb098f85c7a4da92436eb53a2608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _actions:
+  - {fileID: 11400000, guid: a2eedc81ad256dd429fd94a61b19b544, type: 2}
+  - {fileID: 11400000, guid: 3da5915803c71e64fb1cb4b3aa5b80ac, type: 2}
 --- !u!114 &816891243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba6d68e65c92874db2d8342aa3d38ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tempo: 60
+  _tempo: 1
   _totalBeats: 8
   _tickables: []
 --- !u!114 &816891244
@@ -96,5 +102,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f143dc8c1545654a8146fc0c361b043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _battleOrder: {fileID: 11400000, guid: ac47328ca01a6b64192d31b0fdeab4d0, type: 2}
+--- !u!114 &4739046530487388136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658714918964769462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf6be8ec010b44409739e6f69ec0b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3425357358453707824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658714918964769462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8158150939c83e41a6a2c1cf6d8c478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -17,7 +17,7 @@ public class GameTimeManager : MonoBehaviour
     private int _currentBeat = 0;
     public int CurrentBeat { get { return _currentBeat; } }
 
-    public bool AtHalfBeat { get { return _lastTickTime > ((1.0f / _tempo) * 0.5f); } }
+    public bool AtHalfBeat { get { return _doneHalfTick; } }
 
     private float _lastTickTime = 0;
 
@@ -32,11 +32,16 @@ public class GameTimeManager : MonoBehaviour
     }
 
     // Update is called once per frame
+    private bool _doneHalfTick = false;
     void Update()
     {
         _lastTickTime += Time.deltaTime;
 
         float tickRate = 1.0f / _tempo;
+        if (!_doneHalfTick && _lastTickTime > (tickRate * 0.5f))
+        {
+            DoHalfTick();
+        }
 
         if (_lastTickTime > tickRate)
         {
@@ -48,7 +53,8 @@ public class GameTimeManager : MonoBehaviour
     private void DoTick()
     {
         _currentBeat++;
-        if(_currentBeat >= _totalBeats)
+        _doneHalfTick = false;
+        if (_currentBeat >= _totalBeats)
         {
             _currentBeat = 0;
         }
@@ -56,6 +62,15 @@ public class GameTimeManager : MonoBehaviour
         foreach (var tickable in _tickables)
         {
             tickable.Tick();
+        }
+    }
+
+    private void DoHalfTick()
+    {
+        _doneHalfTick = true;
+        foreach (var tickable in _tickables)
+        {
+            tickable.HalfTick();
         }
     }
 }

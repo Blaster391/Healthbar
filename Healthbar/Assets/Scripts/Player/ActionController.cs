@@ -49,6 +49,11 @@ public class ActionController : ITickable
 
     public void AttemptActions()
     {
+        if(_currentInputs.Count == 0)
+        {
+            return;
+        }
+
         bool valid = false;
         foreach (var action in _actions)
         {

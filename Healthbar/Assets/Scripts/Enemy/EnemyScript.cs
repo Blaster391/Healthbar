@@ -22,6 +22,7 @@ public class EnemyScript : ITickable
     public void Setup(EnemyObject enemy)
     {
         _baseEnemy = enemy;
+        enemy.ParseAttackPattern();
         _currentHealth = enemy.MaxHealth;
     }
 

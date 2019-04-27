@@ -18,4 +18,5 @@ public abstract class ITickable : MonoBehaviour
     }
 
     public abstract void Tick();
+    public virtual void HalfTick() { }
 }

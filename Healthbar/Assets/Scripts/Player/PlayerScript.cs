@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    [SerializeField]
+    private string _playerName = "";
+    public string PlayerName { get { return _playerName; } }
+
+
     // Start is called before the first frame update
     void Start()
     {

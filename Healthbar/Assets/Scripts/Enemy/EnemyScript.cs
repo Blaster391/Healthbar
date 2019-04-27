@@ -13,6 +13,8 @@ public class EnemyScript : ITickable
     private BattleManager _battleManager;
 
     private int _currentHealth = 10;
+    public int CurrentHealth => _currentHealth;
+    public int MaxHealth => _baseEnemy.MaxHealth;
 
     // Start is called before the first frame update
     void Start()

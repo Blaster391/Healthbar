@@ -8,7 +8,9 @@ public class BattleManager : MonoBehaviour
     private BattleOrderObject _battleOrder;
 
     private int _currentBattleIndex = 0;
+    public int BattleNumber => _currentBattleIndex;
     private int _currentWaveIndex = 0;
+    public int WaveNumber => _currentWaveIndex;
 
     public BattleObject GetCurrentBattle()
     {

@@ -10,6 +10,12 @@ public class BasicBlock : BaseAction
     [SerializeField]
     private int _blockStrength = 1;
 
+    public override ActionType ActionType()
+    {
+        return global::ActionType.Defence;
+    }
+
+
     protected override void TriggerCore()
     {
         Debug.Log("Am block");

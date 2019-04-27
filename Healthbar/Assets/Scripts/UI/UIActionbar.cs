@@ -15,6 +15,9 @@ public class UIActionbar : MonoBehaviour
 
     [SerializeField]
     private GameObject[] _inputs;
+    [SerializeField]
+    private Image _actionSymbol;
+
 
     [SerializeField]
     private Sprite _attackSymbol;
@@ -53,13 +56,25 @@ public class UIActionbar : MonoBehaviour
         _disabledScribble.SetActive(!action.IsActive());
 
         UpdateInputSymbols();
+
+        switch (action.ActionType())
+        {
+            case ActionType.Attack:
+                _actionSymbol.sprite = _attackSymbol;
+                break;
+            case ActionType.Defence:
+                _actionSymbol.sprite = _defenceSymbol;
+                break;
+            default:
+                Debug.Log("Missing action type symbol");
+                break;
+        }
     }
 
     void UpdateInputSymbols()
     {
         for (int i = 0; i < _inputs.Length; ++i)
         {
-            //TODO oh god this code
             var action = _actionController.Actions[_index];
             if (i < action.ActionPattern.Length)
             {

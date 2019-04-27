@@ -8,8 +8,10 @@ public class PlayerScript : ITickable
     private string _playerName = "";
     public string PlayerName { get { return _playerName; } }
 
-    private int _maxHealth = 100;
-    private int _currentHealth = 100;
+    private int _maxHealth = 20;
+    private int _currentHealth = 20;
+    public int CurrentHealth => _currentHealth;
+    public int MaxHealth => _maxHealth;
 
     private int _blockTimer = 0;
     private int _blockStrength = 1;

@@ -725,6 +725,7 @@ MonoBehaviour:
   - {fileID: 208303540}
   - {fileID: 635597177}
   - {fileID: 474018296}
+  _actionSymbol: {fileID: 308756459}
   _attackSymbol: {fileID: 21300000, guid: b78cd9184570f1a4f9b6b7205cc55a41, type: 3}
   _defenceSymbol: {fileID: 21300000, guid: 7846b9bf6381e9b4a81307bee75b4cb1, type: 3}
   _leftInputDefault: {fileID: 21300000, guid: a067b626b93bb53478e677f6e3ffb330, type: 3}

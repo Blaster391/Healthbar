@@ -11,6 +11,8 @@ public class UIGeneric : MonoBehaviour
     private Text _playerNameText;
     [SerializeField]
     private Text _enemyNameText;
+    [SerializeField]
+    private Text _waveNumberText;
 
     private BattleManager _battleManager;
     private EnemyScript _enemy;
@@ -30,5 +32,6 @@ public class UIGeneric : MonoBehaviour
         _enemyNameText.text = _enemy.BaseEnemy.EnemyName;
         _playerNameText.text = _player.PlayerName;
         _battleText.text = _battleManager.GetCurrentBattle().BattleName;
+        _waveNumberText.text = (_battleManager.WaveNumber + 1).ToString();
     }
 }

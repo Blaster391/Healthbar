@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+public enum ActionType
+{
+    Attack,
+    Defence
+}
+
 public abstract class BaseAction : ScriptableObject
 {
-
     protected PlayerScript Player { get { return GameMaster.Find<PlayerScript>(); } }
     protected EnemyScript Enemy { get { return GameMaster.Find<EnemyScript>(); } }
 
@@ -60,6 +65,7 @@ public abstract class BaseAction : ScriptableObject
     }
 
     protected abstract void TriggerCore();
+    public abstract ActionType ActionType();
 
     public void ParsePattern()
     {

@@ -20,6 +20,7 @@ public class GameTimeManager : MonoBehaviour
     public bool AtHalfBeat { get { return _doneHalfTick; } }
 
     private float _lastTickTime = 0;
+    public float ProgressThroughBeat { get { return _lastTickTime / (1.0f / _tempo); } }
 
     public void Register(ITickable tickable)
     {

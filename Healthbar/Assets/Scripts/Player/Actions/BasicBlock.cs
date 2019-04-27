@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicBlock : MonoBehaviour
+[CreateAssetMenu(fileName = "Block", menuName = "Action/Block")]
+public class BasicBlock : BaseAction
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void TriggerCore()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("Am block");
     }
 }

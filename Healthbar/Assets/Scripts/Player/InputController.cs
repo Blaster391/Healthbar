@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum InputType
+{
+    Left,
+    Right,
+    Confirm
+}
+
 public class InputController : MonoBehaviour
 {
     public bool ConfirmPressed()

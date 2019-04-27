@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Attack", menuName = "Action/Attack")]
 public class BasicAttack : BaseAction
 {
     [SerializeField]
@@ -9,6 +10,6 @@ public class BasicAttack : BaseAction
 
     protected override void TriggerCore()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Am atak");
     }
 }

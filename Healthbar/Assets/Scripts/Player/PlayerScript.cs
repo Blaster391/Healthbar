@@ -59,7 +59,6 @@ public class PlayerScript : ITickable
 
         _currentHealth -= damage;
         OnPlayerDamaged?.Invoke(damage);
-        Debug.Log("Player damaged by " + damage);
         if (_currentHealth < 0)
         {
             _currentHealth = 0;
@@ -67,7 +66,6 @@ public class PlayerScript : ITickable
             GameMaster.Find<GameMaster>().GameOver();
             OnPlayerKilled?.Invoke();
         }
-        //TODO raise eventy
     }
 
     public override void Tick()

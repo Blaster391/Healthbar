@@ -23,9 +23,29 @@ public class BattleManager : MonoBehaviour
     }
 
 
+    public bool OnFinalWaveOfBattle()
+    {
+        return _currentWaveIndex == (GetCurrentBattle().GetNumberOfWaves() - 1);
+    }
+
+    public void NextWave()
+    {
+        _currentWaveIndex++;
+    }
+
     public void NextBattle()
     {
         _currentWaveIndex = 0;
         _currentBattleIndex++;
+    }
+
+    public void StateStart()
+    {
+        GameMaster.Find<GameTimeManager>().ResetTicks();
+    }
+
+    public void StateEnd()
+    {
+
     }
 }

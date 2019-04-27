@@ -11,6 +11,10 @@ public class BattleObject : ScriptableObject
 
     [SerializeField]
     private List<EnemyObject> _waves;
+    public int GetNumberOfWaves()
+    {
+        return _waves.Count;
+    }
 
     public EnemyObject GetWave(int idx)
     {

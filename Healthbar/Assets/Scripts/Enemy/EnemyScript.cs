@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyScript : ITickable
 {
+    [SerializeField]
+    private float _offscreenDistance = 200;
+    public float OffscreenDistance => _offscreenDistance;
 
     public delegate void EnemyDamaged(int damage);
     public event EnemyDamaged OnEnemyDamaged;
@@ -44,11 +47,11 @@ public class EnemyScript : ITickable
         _currentHealth -= damage;
 
         OnEnemyDamaged?.Invoke(damage);
-        if(_currentHealth < 0)
+        if(_currentHealth <= 0)
         {
             _currentHealth = 0;
             OnEnemyKilled?.Invoke();
-            Debug.Log("Am ded");
+            GameMaster.Find<GameMaster>().TransitionTo(GameState.WaveEnded);
             
         }
         //TODO raise eventy

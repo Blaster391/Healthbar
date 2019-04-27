@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameTimeManager : MonoBehaviour
 {
+    public delegate void TickEvent();
+    public event TickEvent OnTick;
+
     [SerializeField]
     private float _tempo = 60;
 
@@ -32,10 +35,22 @@ public class GameTimeManager : MonoBehaviour
         _tickables.Remove(tickable);
     }
 
+    public void ResetTicks()
+    {
+        _lastTickTime = 0;
+        _currentBeat = 0;
+        _doneHalfTick = false;
+    }
+
     // Update is called once per frame
     private bool _doneHalfTick = false;
     void Update()
     {
+        if(GameMaster.Find<GameMaster>().CurrentState != GameState.Battling)
+        {
+            return;
+        }
+
         _lastTickTime += Time.deltaTime;
 
         float tickRate = 1.0f / _tempo;
@@ -64,6 +79,8 @@ public class GameTimeManager : MonoBehaviour
         {
             tickable.Tick();
         }
+
+        OnTick?.Invoke();
     }
 
     private void DoHalfTick()

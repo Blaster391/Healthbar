@@ -25,13 +25,60 @@ public class GameMaster : MonoBehaviour
 
     public void TransitionTo(GameState state)
     {
+        switch (_state)
+        {
+            case GameState.Menu:
+                GameMaster.Find<MainMenuManager>().StateEnd();
+                break;
+            case GameState.Battling:
+                GameMaster.Find<BattleManager>().StateEnd();
+                break;
+            case GameState.WaveStarted:
+                GameMaster.Find<WaveStartManager>().StateEnd();
+                break;
+            case GameState.WaveEnded:
+                GameMaster.Find<WaveEndManager>().StateEnd();
+                break;
+            case GameState.Shopping:
+                GameMaster.Find<ShoppingStateManager>().StateEnd();
+                break;
+            case GameState.GameOver:
+                GameMaster.Find<GameOverStateManager>().StateEnd();
+                break;
+            default:
+                break;
+        }
+
         _state = state;
+
+        switch (_state)
+        {
+            case GameState.Menu:
+                GameMaster.Find<MainMenuManager>().StateStart();
+                break;
+            case GameState.Battling:
+                GameMaster.Find<BattleManager>().StateStart();
+                break;
+            case GameState.WaveStarted:
+                GameMaster.Find<WaveStartManager>().StateStart();
+                break;
+            case GameState.WaveEnded:
+                GameMaster.Find<WaveEndManager>().StateStart();
+                break;
+            case GameState.Shopping:
+                GameMaster.Find<ShoppingStateManager>().StateStart();
+                break;
+            case GameState.GameOver:
+                GameMaster.Find<GameOverStateManager>().StateStart();
+                break;
+            default:
+                Debug.LogError("Invalid state???");
+                break;
+        }
     }
 
     public void GameOver()
     {
-        Debug.Log("Game done");
         TransitionTo(GameState.GameOver);
-        //TODO what do
     }
 }

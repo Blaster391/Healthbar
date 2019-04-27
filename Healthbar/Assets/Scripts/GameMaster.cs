@@ -9,4 +9,11 @@ public class GameMaster : MonoBehaviour
     {
         return GameObject.Find("GameMaster").GetComponent<T>();
     }
+
+    public void GameOver()
+    {
+        Debug.Log("Game done");
+
+        //TODO what do
+    }
 }

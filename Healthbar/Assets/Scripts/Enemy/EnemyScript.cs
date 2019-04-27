@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyScript : ITickable
 {
 
+    private PlayerScript _player;
+
     private EnemyObject _baseEnemy;
     public EnemyObject BaseEnemy { get { return _baseEnemy; } }
 
@@ -16,6 +18,7 @@ public class EnemyScript : ITickable
     void Start()
     {
         _battleManager = GameMaster.Find<BattleManager>();
+        _player = GameMaster.Find<PlayerScript>();
         Setup(_battleManager.GetCurrentWave());
     }
 
@@ -45,6 +48,14 @@ public class EnemyScript : ITickable
 
     public override void Tick()
     {
-        
+        if(_currentHealth <= 0)
+        {
+            return;
+        }
+
+        if (_baseEnemy.IsAttackingOnBeat(_timeManager.CurrentBeat))
+        {
+            _player.TakeDamage(_baseEnemy.AttackDamage(_timeManager.CurrentBeat));
+        }
     }
 }

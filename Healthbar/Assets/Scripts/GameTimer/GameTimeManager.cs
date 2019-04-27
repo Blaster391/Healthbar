@@ -15,6 +15,9 @@ public class GameTimeManager : MonoBehaviour
     private List<ITickable> _tickables;
 
     private int _currentBeat = 0;
+    public int CurrentBeat { get { return _currentBeat; } }
+
+    public bool AtHalfBeat { get { return _lastTickTime > ((1.0f / _tempo) * 0.5f); } }
 
     private float _lastTickTime = 0;
 

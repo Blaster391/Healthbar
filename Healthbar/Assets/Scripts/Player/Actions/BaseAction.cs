@@ -5,6 +5,10 @@ using UnityEngine;
 
 public abstract class BaseAction : ScriptableObject
 {
+
+    protected PlayerScript Player { get { return GameMaster.Find<PlayerScript>(); } }
+    protected EnemyScript Enemy { get { return GameMaster.Find<EnemyScript>(); } }
+
     [SerializeField]
     private string _actionName = "";
     public string ActionName { get { return _actionName; } }

@@ -15,3 +15,4 @@ MonoBehaviour:
   _enemyName: Jeff
   _enemyDialogue: mah name jeff
   _appearance: {fileID: 11400000, guid: c7b0b1e9d8432184684a24c97ac88c4d, type: 2}
+  _maxHealth: 10

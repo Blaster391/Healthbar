@@ -11,5 +11,6 @@ public class BasicAttack : BaseAction
     protected override void TriggerCore()
     {
         Debug.Log("Am atak");
+        Enemy.TakeDamage(_damage);
     }
 }

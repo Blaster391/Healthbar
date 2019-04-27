@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b7c346b58e2874a88e3b75f365c210, type: 3}
   m_Name: TestAttack
   m_EditorClassIdentifier: 
-  _patternString: R
+  _actionName: 
+  _patternString: RRL
   _cooldown: 1
   _upgradedAction: {fileID: 0}
   _damage: 1

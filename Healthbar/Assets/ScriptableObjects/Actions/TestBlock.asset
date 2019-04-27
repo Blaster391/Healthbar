@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: TestBlock
   m_EditorClassIdentifier: 
   _actionName: 
-  _patternString: L
+  _patternString: LL
   _cooldown: 1
-  _upgradedAction: {fileID: 0}
   _blockLength: 8
   _blockStrength: 1

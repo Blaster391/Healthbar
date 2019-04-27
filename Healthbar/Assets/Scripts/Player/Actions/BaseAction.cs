@@ -19,12 +19,10 @@ public abstract class BaseAction : ScriptableObject
     [SerializeField]
     private int _cooldown = 1;
 
-    [SerializeField]
-    private BaseAction _upgradedAction = null;
-
     private int _currentTime = 0;
 
     private InputType[] _actionPattern;
+    public InputType[] ActionPattern => _actionPattern;
 
     // Update is called once per frame
     public void Tick()
@@ -69,11 +67,11 @@ public abstract class BaseAction : ScriptableObject
 
         for(int i = 0; i < _patternString.Length; ++i)
         {
-            if(_patternString.Equals("L", System.StringComparison.CurrentCultureIgnoreCase))
+            if(_patternString[i].Equals('L'))
             {
                 _actionPattern[i] = InputType.Left;
             }
-            else if(_patternString.Equals("R", System.StringComparison.CurrentCultureIgnoreCase))
+            else if(_patternString[i].Equals('R'))
             {
                 _actionPattern[i] = InputType.Right;
             }

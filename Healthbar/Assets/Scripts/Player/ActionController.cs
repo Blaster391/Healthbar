@@ -6,6 +6,7 @@ public class ActionController : ITickable
 {
     [SerializeField]
     private List<BaseAction> _actions;
+    public List<BaseAction> Actions { get { return _actions; } }
 
     private InputController _inputController;
 

@@ -6,10 +6,7 @@ public class ActionController : MonoBehaviour
 {
     private List<BaseAction> _actions;
 
-    void Update()
-    {
 
-    }
 
     public void AttemptAction()
     {

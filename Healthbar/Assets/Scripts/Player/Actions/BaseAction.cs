@@ -2,12 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseAction : MonoBehaviour
+public abstract class BaseAction : ScriptableObject
 {
+    [SerializeField]
+    private string _patternString = "0";
+
     [SerializeField]
     private int _cooldown = 1;
 
+    [SerializeField]
+    private BaseAction _upgradedAction = null;
+
     private int _currentTime = 0;
+
+    private bool[] _actionPattern;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +35,25 @@ public class BaseAction : MonoBehaviour
     public bool IsActive()
     {
         return _currentTime <= 0;
+    }
+
+    public void Trigger()
+    {
+        if (!IsActive())
+        {
+            return;
+        }
+
+        TriggerCore();
+        _currentTime = _cooldown;
+    }
+
+    protected abstract void TriggerCore();
+
+    private void ParsePattern()
+    {
+        GameTimeManager timeManager = GameMaster.Find<GameTimeManager>();
+
+        _actionPattern = new bool[timeManager.TotalBeats];
     }
 }

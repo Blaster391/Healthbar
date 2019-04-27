@@ -9,6 +9,7 @@ public class GameTimeManager : MonoBehaviour
 
     [SerializeField]
     private int _totalBeats = 8;
+    public int TotalBeats { get { return _totalBeats; } }
 
     [SerializeField]
     private List<ITickable> _tickables;

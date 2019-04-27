@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Enemy", menuName = "Enemy/Appearance")]
+[CreateAssetMenu(fileName = "EnemyAppearance", menuName = "Enemy/Appearance")]
 public class EnemyAppearanceObject : ScriptableObject
 {
 

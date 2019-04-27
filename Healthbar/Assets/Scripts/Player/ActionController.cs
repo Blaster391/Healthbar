@@ -10,6 +10,7 @@ public class ActionController : ITickable
     private InputController _inputController;
 
     private List<InputType> _currentInputs = new List<InputType>();
+    public List<InputType> CurrentInputs { get { return _currentInputs; } }
 
     private void Start()
     {

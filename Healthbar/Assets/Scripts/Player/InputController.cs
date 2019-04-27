@@ -26,6 +26,21 @@ public class InputController : MonoBehaviour
         return Input.GetButtonDown("Right");
     }
 
+    public bool ConfirmHeld()
+    {
+        return Input.GetButton("Confirm");
+    }
+
+    public bool LeftHeld()
+    {
+        return Input.GetButton("Left");
+    }
+
+    public bool RightHeld()
+    {
+        return Input.GetButton("Right");
+    }
+
     // Update is called once per frame
     void Update()
     {

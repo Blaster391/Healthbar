@@ -42,6 +42,7 @@ public class BattleManager : MonoBehaviour
     public void StateStart()
     {
         GameMaster.Find<GameTimeManager>().ResetTicks();
+        GameMaster.Find<ActionController>().ResetCooldowns();
     }
 
     public void StateEnd()

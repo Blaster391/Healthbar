@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class WaveEndManager : MonoBehaviour
 {
-
-
     [SerializeField]
-    private float _scrollSpeed = 10;
+    private UIEnemy _uiEnemy;
 
 
     private PlayerScript _player;
     private EnemyScript _enemy;
     private BattleManager _battleManager;
     private GameMaster _gameMaster;
-
-    bool _scrolling = false;
-    float _initialX = 0;
+    private GameTimeManager _timeManager;
 
     void Start()
     {
@@ -24,6 +20,7 @@ public class WaveEndManager : MonoBehaviour
         _enemy = GameMaster.Find<EnemyScript>();
         _battleManager = GameMaster.Find<BattleManager>();
         _gameMaster = GameMaster.Find<GameMaster>();
+        _timeManager = GameMaster.Find<GameTimeManager>();
     }
 
     // Update is called once per frame
@@ -31,17 +28,9 @@ public class WaveEndManager : MonoBehaviour
     {
         if (_gameMaster.CurrentState == GameState.WaveEnded)
         {
-            if (_scrolling)
+            if (!_uiEnemy.IsOffscreen())
             {
-                Vector3 newPos = _enemy.transform.position;
-                newPos.x = _scrollSpeed * Time.deltaTime;
-
-                if (newPos.x > _initialX + _enemy.OffscreenDistance)
-                {
-                    newPos.x = _initialX + _enemy.OffscreenDistance;
-                    _scrolling = false;
-                }
-                _enemy.transform.position = newPos;
+                _uiEnemy.MoveOffscreen();
             }
             else
             {
@@ -61,11 +50,8 @@ public class WaveEndManager : MonoBehaviour
     }
     public void StateStart()
     {
-       // _scrolling = true;
-        _initialX = _enemy.transform.position.x;
-
-       
-
+        _uiEnemy.MoveOffscreen();
+        _timeManager.ResetTicks();
     }
 
     public void StateEnd()

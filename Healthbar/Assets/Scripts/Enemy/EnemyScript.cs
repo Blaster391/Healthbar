@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class EnemyScript : ITickable
 {
-    [SerializeField]
-    private float _offscreenDistance = 200;
-    public float OffscreenDistance => _offscreenDistance;
 
     public delegate void EnemyDamaged(int damage);
     public event EnemyDamaged OnEnemyDamaged;
@@ -26,6 +23,8 @@ public class EnemyScript : ITickable
     public int CurrentHealth => _currentHealth;
     public int MaxHealth => _baseEnemy.MaxHealth;
 
+    private bool _hurtThisBeat = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,12 +38,14 @@ public class EnemyScript : ITickable
         _baseEnemy = enemy;
         enemy.ParseAttackPattern();
         _currentHealth = enemy.MaxHealth;
+        _hurtThisBeat = false;
         OnEnemySpawned?.Invoke();
     }
 
     public void TakeDamage(int damage)
     {
         _currentHealth -= damage;
+        _hurtThisBeat = true;
 
         OnEnemyDamaged?.Invoke(damage);
         if(_currentHealth <= 0)
@@ -65,7 +66,8 @@ public class EnemyScript : ITickable
 
     public override void Tick()
     {
-        if(_currentHealth <= 0)
+        _hurtThisBeat = false;
+        if (_currentHealth <= 0)
         {
             return;
         }
@@ -74,5 +76,20 @@ public class EnemyScript : ITickable
         {
             _player.TakeDamage(_baseEnemy.AttackDamage(_timeManager.CurrentBeat));
         }
+    }
+
+    public bool HurtThisBeat()
+    {
+        return _hurtThisBeat;
+    }
+
+    public bool AttackingThisBeat()
+    {
+        return _baseEnemy.IsAttackingOnBeat(_timeManager.CurrentBeat);
+    }
+
+    public bool AttackingNextBeat()
+    {
+        return _baseEnemy.IsAttackingNextBeat(_timeManager.CurrentBeat);
     }
 }

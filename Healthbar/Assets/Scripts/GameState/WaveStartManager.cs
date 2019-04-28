@@ -5,11 +5,8 @@ using UnityEngine;
 public class WaveStartManager : MonoBehaviour
 {
 
-
-    private float _initialX = 0;
-
     [SerializeField]
-    private float _speed = 10;
+    private UIEnemy _uiEnemy;
 
     private bool _scrolling = false;
 
@@ -29,17 +26,9 @@ public class WaveStartManager : MonoBehaviour
     {
         if(_gameMaster.CurrentState == GameState.WaveStarted)
         {
-            if (_scrolling)
+            if (_uiEnemy.IsOffscreen())
             {
-                Vector3 newPos = _enemy.transform.position;
-                newPos.x = _speed * Time.deltaTime;
-
-                if (newPos.x > _initialX - _enemy.OffscreenDistance)
-                {
-                    newPos.x = _initialX - _enemy.OffscreenDistance;
-                    _scrolling = false;
-                }
-                _enemy.transform.position = newPos;
+                _uiEnemy.MoveOnscreen();
             }
             else
             {
@@ -54,7 +43,7 @@ public class WaveStartManager : MonoBehaviour
     {
         // _scrolling = true;
         _enemy.Setup(GameMaster.Find<BattleManager>().GetCurrentWave());
-        _initialX = _enemy.transform.position.x;
+        _uiEnemy.MoveOnscreen();
     }
 
     public void StateEnd()

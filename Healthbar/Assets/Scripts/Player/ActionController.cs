@@ -109,4 +109,12 @@ public class ActionController : ITickable
             action.Tick();
         }
     }
+
+    public void ResetCooldowns()
+    {
+        foreach (var action in _actions)
+        {
+            action.ResetCooldown();
+        }
+    }
 }

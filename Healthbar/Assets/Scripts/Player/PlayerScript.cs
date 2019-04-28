@@ -22,6 +22,7 @@ public class PlayerScript : ITickable
     private int _blockStrength = 1;
     public int BlockStrength => _blockStrength;
 
+    bool _hurtThisBeat = false;
     public bool IsBlocking()
     {
         return _blockTimer > 0; 
@@ -47,6 +48,7 @@ public class PlayerScript : ITickable
 
     public void TakeDamage(int baseDamage)
     {
+        _hurtThisBeat = true;
         int damage = baseDamage;
         if (IsBlocking())
         {
@@ -54,6 +56,7 @@ public class PlayerScript : ITickable
             if(damage < 0)
             {
                 damage = 0;
+                _hurtThisBeat = false;
             }
         }
 
@@ -70,9 +73,15 @@ public class PlayerScript : ITickable
 
     public override void Tick()
     {
+        _hurtThisBeat = false;
         if (IsBlocking())
         {
             _blockTimer--;
         }
+    }
+
+    public bool HurtThisBeat()
+    {
+        return _hurtThisBeat;
     }
 }

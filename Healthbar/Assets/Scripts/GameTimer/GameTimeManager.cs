@@ -6,6 +6,8 @@ public class GameTimeManager : MonoBehaviour
 {
     public delegate void TickEvent();
     public event TickEvent OnTick;
+    public delegate void HalfTickEvent();
+    public event HalfTickEvent OnHalfTick;
 
     [SerializeField]
     private float _tempo = 60;
@@ -90,5 +92,6 @@ public class GameTimeManager : MonoBehaviour
         {
             tickable.HalfTick();
         }
+        OnHalfTick?.Invoke();
     }
 }

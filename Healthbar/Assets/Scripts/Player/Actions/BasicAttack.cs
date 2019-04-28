@@ -20,6 +20,7 @@ public class BasicAttack : BaseAction
 
     protected override void TriggerCore()
     {
+        Player.SetAttackedThisBeat(true);
         Enemy.TakeDamage(_damage);
     }
 }

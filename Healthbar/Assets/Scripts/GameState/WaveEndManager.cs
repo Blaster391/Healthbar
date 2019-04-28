@@ -59,6 +59,6 @@ public class WaveEndManager : MonoBehaviour
 
     public void StateEnd()
     {
-
+        _player.SetAttackedThisBeat(false);
     }
 }

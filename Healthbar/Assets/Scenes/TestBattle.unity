@@ -786,6 +786,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 462566612}
+  - component: {fileID: 462566614}
+  - component: {fileID: 462566613}
+  - component: {fileID: 462566615}
   m_Layer: 5
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -807,11 +810,66 @@ RectTransform:
   m_Father: {fileID: 975475757}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -461, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -375.9, y: 0.022476}
+  m_SizeDelta: {x: -751.8, y: -0.045044}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &462566613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462566611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 2c7bcf7c3a08f764a82016dffc6a543f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &462566614
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462566611}
+  m_CullTransparentMesh: 0
+--- !u!114 &462566615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462566611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6af099d462d354f8103485a7df9eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerImage: {fileID: 462566613}
+  _idle1: {fileID: 21300000, guid: 2c7bcf7c3a08f764a82016dffc6a543f, type: 3}
+  _idle2: {fileID: 21300000, guid: c8dcdb0303fc85f4a97c27be91d562ba, type: 3}
+  _attack: {fileID: 21300000, guid: c08e9253b57031e4e8e35accfb85bd63, type: 3}
+  _hurt: {fileID: 21300000, guid: 681399fd017e91b47bed86a1031b9303, type: 3}
+  _guard: {fileID: 21300000, guid: e15edcbdf5ef9824db8a93d23c616014, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,8 @@ public class UIMetronome : ITickable
         {
             _metronome.sprite = _metronomeLeft;
         }
+
+        Tick();
     }
 
     public override void Tick()

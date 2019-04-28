@@ -61,24 +61,30 @@ public class UIControlbar : MonoBehaviour
             _rigthControl.sprite = _rightControlDefault;
         }
 
-        if(_actionController.CurrentInputs.Count > 0 || _confirmed)
+        if(_actionController.CurrentInputs.Count > 0 || _confirmControl.sprite != _confirmControlDisabled || _confirmed)
         {
-            if (_inputController.ConfirmHeld())
+ 
+
+  
+            if(_actionController.CurrentInputs.Count > 0 && !_confirmed)
             {
-                _confirmed = true;
+                _confirmControl.sprite = _confirmControlDefault;
+            }else if (!_confirmed)
+            {
+                _confirmControl.sprite = _confirmControlDisabled;
+            }
+
+            if (_inputController.ConfirmHeld() || _inputController.ConfirmPressed())
+            {
                 _confirmControl.sprite = _confirmControlPressed;
+                _confirmed = true;
             }
             else
             {
-                if (_confirmed)
-                {
-                    _confirmed = false;
-                }
-                {
-                    _confirmControl.sprite = _confirmControlDefault;
-                }
-
+                _confirmed = false;
             }
+
+
         }
         else
         {

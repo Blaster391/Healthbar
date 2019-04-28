@@ -57,6 +57,11 @@ public class UIPurchasableAction : MonoBehaviour
     public void Purchase(int slot)
     {
         var action = _battleManager.GetCurrentBattle().PurchasableActions[_index];
+        if(_player.CurrentHealth <= action.PurchaseCost)
+        {
+            return;
+        }
+
         //For first purchase
         if (_actionController.Actions.Count < 3)
         {

@@ -71,7 +71,6 @@ public class UIActionbar : MonoBehaviour
         if(!_shopItem &&  _index >= _actionController.Actions.Count)
         {
             _toggle.SetActive(false);
-            _disabledScribble.SetActive(true);
             return;
         }
         else if(_shopItem && _index >= _battleManager.GetCurrentBattle().PurchasableActions.Count)

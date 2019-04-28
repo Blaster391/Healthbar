@@ -53,11 +53,16 @@ public abstract class BaseAction : ScriptableObject
     {
         if (IsActive())
         {
+            PutOnCooldown();
             TriggerCore();
+        }
+        else
+        {
+            PutOnCooldown();
         }
 
         
-        PutOnCooldown();
+ 
     }
 
     public void ResetCooldown()

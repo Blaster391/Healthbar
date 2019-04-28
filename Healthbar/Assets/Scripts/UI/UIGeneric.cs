@@ -29,8 +29,13 @@ public class UIGeneric : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_enemy.BaseEnemy == null)
+        {
+            return;
+        }
+
         _enemyNameText.text = _enemy.BaseEnemy.EnemyName;
-        _playerNameText.text = _player.PlayerName;
+        _playerNameText.text = "\"" + _player.PlayerName + "\"";
         _battleText.text = _battleManager.GetCurrentBattle().BattleName;
         _waveNumberText.text = (_battleManager.WaveNumber + 1).ToString();
     }

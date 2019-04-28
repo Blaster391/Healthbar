@@ -71,7 +71,7 @@ public class GameOverStateManager : MonoBehaviour
                 _logText.text += "\n";
                 _logText.text += "\n";
 
-                _logText.text += $"Legends say that it won in the battles of \n";
+                _logText.text += $"Legends say that it lived through \n";
 
                 if(_gameLog.BattlesWon.Count == 0)
                 {

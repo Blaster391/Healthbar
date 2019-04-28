@@ -35,6 +35,11 @@ public class UIHealthbar : MonoBehaviour
     {
         if (_enemyHealth)
         {
+            if (GameMaster.Find<EnemyScript>().BaseEnemy == null)
+            {
+                return;
+            }
+
             _currentHealth = GameMaster.Find<EnemyScript>().CurrentHealth;
             _maxHealth = GameMaster.Find<EnemyScript>().MaxHealth;
         }

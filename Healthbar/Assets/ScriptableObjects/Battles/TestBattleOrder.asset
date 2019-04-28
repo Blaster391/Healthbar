@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: TestBattleOrder
   m_EditorClassIdentifier: 
   _battles:
+  - {fileID: 11400000, guid: 9146955119ebc7b499da746bbfb80e01, type: 2}
   - {fileID: 11400000, guid: 5c70dbe7efac6a348ac885c815742fc3, type: 2}
   - {fileID: 11400000, guid: a1611d1b427bbdf4ab37c6f3fc32b510, type: 2}

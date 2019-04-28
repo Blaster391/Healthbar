@@ -51,6 +51,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        _gameMaster.TransitionTo(GameState.WaveStarted);
+        _gameMaster.TransitionTo(GameState.Shopping);
     }
 }

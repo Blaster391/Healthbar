@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5b9c81e0bdcc44c9eb3734aaf60574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToLive: 2
+  _timeToLive: 0.75
   _value: {fileID: 761443895994642436}
   _image: {fileID: 761443894933785044}
 --- !u!222 &761443894933785045

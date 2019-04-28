@@ -14,7 +14,7 @@ public class EnemyScript : ITickable
 
     private PlayerScript _player;
 
-    private EnemyObject _baseEnemy;
+    private EnemyObject _baseEnemy = null;
     public EnemyObject BaseEnemy { get { return _baseEnemy; } }
 
     private BattleManager _battleManager;
@@ -30,7 +30,7 @@ public class EnemyScript : ITickable
     {
         _battleManager = GameMaster.Find<BattleManager>();
         _player = GameMaster.Find<PlayerScript>();
-        Setup(_battleManager.GetCurrentWave());
+        //Setup(_battleManager.GetCurrentWave());
     }
 
     public void Setup(EnemyObject enemy)

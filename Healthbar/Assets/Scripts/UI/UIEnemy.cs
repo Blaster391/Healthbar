@@ -38,6 +38,11 @@ public class UIEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_enemy.BaseEnemy == null)
+        {
+            return;
+        }
+
         UpdateSprite();
         UpdateAttackSignal();
         UpdateMotion();
@@ -45,6 +50,7 @@ public class UIEnemy : MonoBehaviour
 
     private void UpdateSprite()
     {
+
         var appearance = _enemy.BaseEnemy.Appearance;
         if (_enemy.CurrentHealth == 0)
         {

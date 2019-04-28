@@ -8,7 +8,11 @@ public class ShoppingStateManager : MonoBehaviour
     [SerializeField]
     private GameObject _shoppingScreen;
 
+    [SerializeField]
+    private GameObject _doneButton;
+
     private PlayerScript _player;
+    private ActionController _actionController;
     private EnemyScript _enemy;
     private GameMaster _gameMaster;
     private BattleManager _battleManager;
@@ -23,6 +27,7 @@ public class ShoppingStateManager : MonoBehaviour
         _battleManager = GameMaster.Find<BattleManager>();
         _inputController = GameMaster.Find<InputController>();
         _gameLog = GameMaster.Find<GameLog>();
+        _actionController = GameMaster.Find<ActionController>();
     }
 
     // Update is called once per frame
@@ -34,11 +39,18 @@ public class ShoppingStateManager : MonoBehaviour
             {
                 ShoppingDone();
             }
+
+            _doneButton.SetActive(_actionController.Actions.Count > 0);
         }
     }
 
     public void ShoppingDone()
     {
+        if(_actionController.Actions.Count == 0)
+        {
+            return;
+        }
+
         _gameLog.Log(_battleManager.GetCurrentBattle());
         _battleManager.NextBattle();
         _gameMaster.TransitionTo(GameState.WaveStarted);

@@ -151,6 +151,9 @@ public class WaveStartManager : MonoBehaviour
         _slideSoundPlayed = false;
         _speechSoundPlayed = false;
 
+        _currentAnnouncementTime = 0;
+        _speechBubbleTime = 0;
+
         _audioSystem.BattleStart();
     }
 

@@ -88,15 +88,21 @@ public class UIEnemy : MonoBehaviour
             if (!_timeManager.AtHalfBeat)
             {
                 //Fade off if not attack next turn
-                colour.a = 1 - (_timeManager.ProgressThroughBeat);
+                colour.a = 1.0f - _timeManager.ProgressThroughBeat * 2;
             }
         }
         else
         {
             if (_enemy.AttackingNextBeat() && _timeManager.AtHalfBeat)
             {
-                colour.a = (_timeManager.ProgressThroughBeat);
+
+
+                colour.a = ((_timeManager.ProgressThroughBeat - 0.5f) * 4);
             }
+        }
+        if (_enemy.AttackingThisBeat() && _enemy.AttackingNextBeat())
+        {
+            colour.a = 1.0f;
         }
 
         _attackSignalImage.color = colour;

@@ -36,11 +36,13 @@ public class ActionController : ITickable
 
         if (_inputController.LeftPressed())
         {
+            GameMaster.Find<GenericAudio>().ButtonPressed();
             _currentInputs.Add(InputType.Left);
         }
 
         if (_inputController.RightPressed())
         {
+            GameMaster.Find<GenericAudio>().ButtonPressed();
             _currentInputs.Add(InputType.Right);
         }
 
@@ -56,6 +58,7 @@ public class ActionController : ITickable
     {
         if(_currentInputs.Count == 0)
         {
+            GameMaster.Find<GenericAudio>().ButtonFailed();
             return;
         }
 
@@ -70,15 +73,16 @@ public class ActionController : ITickable
         }
 
         _currentInputs.Clear();
-        //TODO events for UI
+
         if (valid)
         {
-
+            GameMaster.Find<GenericAudio>().ButtonPressed();
         }
         else
         {
             foreach (var action in _actions)
             {
+                GameMaster.Find<GenericAudio>().ButtonFailed();
                 action.PutOnCooldown();
             }
         }

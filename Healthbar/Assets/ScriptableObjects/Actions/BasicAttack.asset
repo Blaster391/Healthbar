@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21b7c346b58e2874a88e3b75f365c210, type: 3}
-  m_Name: TestAttack
+  m_Name: BasicAttack
   m_EditorClassIdentifier: 
   _actionName: 
-  _patternString: RRL
-  _cooldown: 4
+  _patternString: R
+  _cooldown: 1
   _purchaseCost: 1
-  _damage: 3
+  _damage: 1

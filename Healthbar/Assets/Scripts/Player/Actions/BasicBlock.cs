@@ -15,6 +15,10 @@ public class BasicBlock : BaseAction
         return global::ActionType.Defence;
     }
 
+    public override string EffectText()
+    {
+        return _blockLength.ToString() + "-" + _blockStrength.ToString();
+    }
 
     protected override void TriggerCore()
     {

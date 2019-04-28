@@ -23,6 +23,12 @@ public abstract class BaseAction : ScriptableObject
 
     [SerializeField]
     private int _cooldown = 1;
+    public int CooldownLength => _cooldown;
+    public int CooldownRemaining => _currentTime;
+
+    [SerializeField]
+    private int _purchaseCost = 1;
+    public int PurchaseCost => _purchaseCost;
 
     private int _currentTime = 0;
 
@@ -110,4 +116,6 @@ public abstract class BaseAction : ScriptableObject
     {
         return inputPattern.SequenceEqual(_actionPattern);
     }
+
+    public abstract string EffectText();
 }

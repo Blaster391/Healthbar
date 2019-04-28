@@ -24,7 +24,10 @@ public class ActionController : ITickable
 
     private void Update()
     {
-        MonitorInputs();
+        if(GameMaster.Find<GameMaster>().CurrentState == GameState.Battling)
+        {
+            MonitorInputs();
+        }
     }
 
     private void MonitorInputs()

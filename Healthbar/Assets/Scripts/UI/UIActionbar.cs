@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class UIActionbar : MonoBehaviour
 {
     [SerializeField]
+    private bool _shopItem = false;
+
+    [SerializeField]
     private int _index = 0;
 
     [SerializeField]
@@ -32,12 +35,22 @@ public class UIActionbar : MonoBehaviour
     [SerializeField]
     private Sprite _rightInputActive;
 
+    [SerializeField]
+    private Image _cooldownImage;
+
+    [SerializeField]
+    private Text _cooldownText;
+    [SerializeField]
+    private Text _effectText;
+
     private ActionController _actionController;
+    private GameTimeManager _timeManager;
 
     // Start is called before the first frame update
     void Start()
     {
         _actionController = GameMaster.Find<ActionController>();
+        _timeManager = GameMaster.Find<GameTimeManager>();
     }
 
     // Update is called once per frame
@@ -54,9 +67,51 @@ public class UIActionbar : MonoBehaviour
 
         _toggle.SetActive(true);
         _disabledScribble.SetActive(!action.IsActive());
+        if (_shopItem)
+        {
+            _disabledScribble.SetActive(false);
+        }
 
         UpdateInputSymbols();
+        UpdateCooldown();
+        UpdateEffect();
 
+ 
+    }
+
+    void UpdateCooldown()
+    {
+        var action = _actionController.Actions[_index];
+        _cooldownText.text = action.CooldownLength.ToString();
+        _cooldownImage.rectTransform.rotation = Quaternion.identity;
+        _cooldownText.rectTransform.rotation = Quaternion.identity;
+        if (!action.IsActive())
+        {
+            var remaining = action.CooldownRemaining;
+            if(remaining > action.CooldownLength)
+            {
+                remaining = action.CooldownLength;
+            }
+            _cooldownText.text = remaining.ToString();
+
+            if (_timeManager.AtHalfBeat)
+            {
+                _cooldownImage.rectTransform.rotation = Quaternion.Euler(0, 0, 30);
+                _cooldownText.rectTransform.rotation = Quaternion.identity;
+            }
+            else
+            {
+                _cooldownImage.rectTransform.rotation = Quaternion.Euler(0, 0, -30);
+                _cooldownText.rectTransform.rotation = Quaternion.identity;
+            }
+
+
+        }
+    }
+
+    void UpdateEffect()
+    {
+        var action = _actionController.Actions[_index];
         switch (action.ActionType())
         {
             case ActionType.Attack:
@@ -76,6 +131,9 @@ public class UIActionbar : MonoBehaviour
         for (int i = 0; i < _inputs.Length; ++i)
         {
             var action = _actionController.Actions[_index];
+
+            _effectText.text = action.EffectText();
+
             if (i < action.ActionPattern.Length)
             {
                 _inputs[i].SetActive(true);

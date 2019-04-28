@@ -15,5 +15,6 @@ MonoBehaviour:
   _battleName: Test Battle lmao
   _waves:
   - {fileID: 11400000, guid: 16ef05b42934a1142b49e1daaf4e30fb, type: 2}
-  - {fileID: 11400000, guid: 16ef05b42934a1142b49e1daaf4e30fb, type: 2}
-  - {fileID: 11400000, guid: 16ef05b42934a1142b49e1daaf4e30fb, type: 2}
+  _purchasableActions:
+  - {fileID: 11400000, guid: 5a79b65e777c58948967853b71747082, type: 2}
+  - {fileID: 11400000, guid: 7d9bee137aaa740439e6374187f64fe4, type: 2}

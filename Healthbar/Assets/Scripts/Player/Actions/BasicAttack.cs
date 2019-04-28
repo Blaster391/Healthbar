@@ -13,6 +13,11 @@ public class BasicAttack : BaseAction
         return global::ActionType.Attack;
     }
 
+    public override string EffectText()
+    {
+        return _damage.ToString();
+    }
+
     protected override void TriggerCore()
     {
         Debug.Log("Am atak");

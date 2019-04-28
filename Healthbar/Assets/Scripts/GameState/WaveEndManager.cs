@@ -52,6 +52,9 @@ public class WaveEndManager : MonoBehaviour
     {
         _uiEnemy.MoveOffscreen();
         _timeManager.ResetTicks();
+
+        //Turn off blocking
+        _player.EnableBlock(0, 0);
     }
 
     public void StateEnd()

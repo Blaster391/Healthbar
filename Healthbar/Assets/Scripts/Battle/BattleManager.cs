@@ -43,6 +43,7 @@ public class BattleManager : MonoBehaviour
     {
         GameMaster.Find<GameTimeManager>().ResetTicks();
         GameMaster.Find<ActionController>().ResetCooldowns();
+        GameMaster.Find<ActionController>().CurrentInputs.Clear();
     }
 
     public void StateEnd()

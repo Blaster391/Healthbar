@@ -3263,7 +3263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 245177218, guid: fbe22af551b0a3a4b8e5d108b4324391, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 66.4
+      value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 245177218, guid: fbe22af551b0a3a4b8e5d108b4324391, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4190564747272904500, guid: fbe22af551b0a3a4b8e5d108b4324391,
         type: 3}
@@ -4361,7 +4365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7581,13 +7585,18 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1249581063, guid: fbe22af551b0a3a4b8e5d108b4324391, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4e1e2c62341ab024ba138edede496c94,
+        type: 3}
     - target: {fileID: 245177218, guid: fbe22af551b0a3a4b8e5d108b4324391, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 90
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 245177218, guid: fbe22af551b0a3a4b8e5d108b4324391, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4300211337385276497, guid: fbe22af551b0a3a4b8e5d108b4324391,
         type: 3}

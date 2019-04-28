@@ -63,10 +63,9 @@ public class PlayerScript : ITickable
 
         _currentHealth -= damage;
         OnPlayerDamaged?.Invoke(damage);
-        if (_currentHealth < 0)
+        if (_currentHealth <= 0)
         {
             _currentHealth = 0;
-            Debug.Log("Player ded");
             GameMaster.Find<GameMaster>().GameOver();
             OnPlayerKilled?.Invoke();
         }

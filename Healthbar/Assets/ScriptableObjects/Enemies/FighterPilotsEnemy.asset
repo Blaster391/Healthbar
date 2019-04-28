@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FighterPilotsEnemy
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: 9698ddf4479600147afa90993c337bce, type: 3}
-  _enemyName: Lost Fighter Pilots
+  _enemyName: A Lost Aeroplane
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: a1a75ad4584a3bf4da31086eefb73b07, type: 2}
   _maxHealth: 10

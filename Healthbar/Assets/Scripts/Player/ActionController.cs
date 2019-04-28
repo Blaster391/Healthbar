@@ -76,7 +76,7 @@ public class ActionController : ITickable
 
         if (valid)
         {
-            GameMaster.Find<GenericAudio>().ButtonSuccess();
+            
         }
         else
         {
@@ -99,13 +99,12 @@ public class ActionController : ITickable
         }
 
         //Do invalid actions
-        Debug.Log("No valid actions");
+        GameMaster.Find<GenericAudio>().ButtonFailed();
         foreach (var action in _actions)
         {
             action.PutOnCooldown();
         }
         _currentInputs.Clear();
-        //TODO fire event for sound and animation
     }
 
     public override void Tick()

@@ -55,9 +55,11 @@ public abstract class BaseAction : ScriptableObject
         {
             PutOnCooldown();
             TriggerCore();
+            GameMaster.Find<GenericAudio>().ButtonSuccess();
         }
         else
         {
+            GameMaster.Find<GenericAudio>().ButtonFailed();
             PutOnCooldown();
         }
 

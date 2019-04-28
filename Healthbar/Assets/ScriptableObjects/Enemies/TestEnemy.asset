@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6703432bf247334382c8792739aa8b4, type: 3}
   m_Name: TestEnemy
   m_EditorClassIdentifier: 
+  _enterSound: {fileID: 0}
   _enemyName: Jeff
   _enemyDialogue: mah name jeff
   _appearance: {fileID: 11400000, guid: c7b0b1e9d8432184684a24c97ac88c4d, type: 2}
   _maxHealth: 10
-  _attackPatternString: x-x-x-20-x-1-x-x
+  _attackPatternString: x-x-x-1-x-1-x-x

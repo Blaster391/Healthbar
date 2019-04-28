@@ -94,6 +94,7 @@ public class GameMaster : MonoBehaviour
 
     public void Quit()
     {
+        GameMaster.Find<GenericAudio>().ButtonPressed();
         Application.Quit();
     }
 }

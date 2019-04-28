@@ -6,6 +6,10 @@ using UnityEngine;
 public class EnemyObject : ScriptableObject
 {
     [SerializeField]
+    private AudioClip _enterSound;
+    public AudioClip EnterSound => _enterSound;
+
+    [SerializeField]
     private string _enemyName;
     public string EnemyName {get { return _enemyName; } }
 

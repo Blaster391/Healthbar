@@ -57,10 +57,14 @@ public class UIPurchasableAction : MonoBehaviour
     public void Purchase(int slot)
     {
         var action = _battleManager.GetCurrentBattle().PurchasableActions[_index];
-        if(_player.CurrentHealth <= action.PurchaseCost)
+
+        if (_player.CurrentHealth <= action.PurchaseCost)
         {
+            GameMaster.Find<GenericAudio>().ButtonFailed();
             return;
         }
+
+        GameMaster.Find<GenericAudio>().BuySound();
 
         //For first purchase
         if (_actionController.Actions.Count < 3)

@@ -31,12 +31,14 @@ public class WaveStartManager : MonoBehaviour
 
     private float _currentAnnouncementTime = 0;
     private float _speechBubbleTime = 0;
-
+    private bool _slideSoundPlayed = false;
+    private bool _speechSoundPlayed = false;
     private PlayerScript _player;
     private EnemyScript _enemy;
     private GameMaster _gameMaster;
     private InputController _inputController;
     private BattleManager _battleManager;
+    private GenericAudio _audioSystem;
 
 
     void Start()
@@ -46,6 +48,7 @@ public class WaveStartManager : MonoBehaviour
         _gameMaster = GameMaster.Find<GameMaster>();
         _inputController = GameMaster.Find<InputController>();
         _battleManager = GameMaster.Find<BattleManager>();
+        _audioSystem = GameMaster.Find<GenericAudio>();
     }
 
     // Update is called once per frame
@@ -92,6 +95,12 @@ public class WaveStartManager : MonoBehaviour
                 _waveAnnouncementPanel.gameObject.SetActive(false);
                 if (_uiEnemy.IsOffscreen())
                 {
+                    if (!_slideSoundPlayed)
+                    {
+                        _audioSystem.EnemySlide();
+                        _slideSoundPlayed = true;
+                    }
+
                     _uiEnemy.MoveOnscreen();
                 }
                 else
@@ -99,6 +108,12 @@ public class WaveStartManager : MonoBehaviour
                     _uiSpeechbubble.SetActive(true);
                     _speechBubbleTime -= Time.deltaTime;
                     _uiSpeechText.text = _enemy.BaseEnemy.EnemyDialogue;
+
+                    if (!_speechSoundPlayed)
+                    {
+                        _speechSoundPlayed = true;
+                        _audioSystem.EnemyEnterSound();
+                    }
 
                     if (_inputController.ConfirmPressed())
                     {
@@ -133,6 +148,10 @@ public class WaveStartManager : MonoBehaviour
         _enemy.Setup(GameMaster.Find<BattleManager>().GetCurrentWave());
        // _uiEnemy.MoveOnscreen();
         _speechBubbleTime = _speechTime;
+        _slideSoundPlayed = false;
+        _speechSoundPlayed = false;
+
+        _audioSystem.BattleStart();
     }
 
     public void StateEnd()

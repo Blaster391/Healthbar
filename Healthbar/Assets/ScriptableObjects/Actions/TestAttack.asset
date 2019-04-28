@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b7c346b58e2874a88e3b75f365c210, type: 3}
   m_Name: TestAttack
   m_EditorClassIdentifier: 
-  _actionName: Test Attack
-  _patternString: RRL
-  _cooldown: 4
-  _purchaseCost: 1
-  _damage: 300
+  _actionName: Monster Slap
+  _patternString: RRLRL
+  _cooldown: 100
+  _purchaseCost: 19
+  _damage: 20

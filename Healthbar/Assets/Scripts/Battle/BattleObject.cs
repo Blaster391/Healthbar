@@ -6,6 +6,10 @@ using UnityEngine;
 public class BattleObject : ScriptableObject
 {
     [SerializeField]
+    private AudioClip _bgm;
+    public AudioClip BattleBGM => _bgm;
+
+    [SerializeField]
     private string _battleName;
     public string BattleName { get { return _battleName; } }
 
@@ -25,4 +29,6 @@ public class BattleObject : ScriptableObject
     {
         return _waves[idx];
     }
+
+ 
 }

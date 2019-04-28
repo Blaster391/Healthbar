@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd2f60d2aaeefa4f8c615d5370ead5e, type: 3}
   m_Name: TestBattle
   m_EditorClassIdentifier: 
+  _bgm: {fileID: 8300000, guid: 7c3c1d0992f65f24384a742448741996, type: 3}
   _battleName: Test Battle lmao
   _waves:
   - {fileID: 11400000, guid: 16ef05b42934a1142b49e1daaf4e30fb, type: 2}

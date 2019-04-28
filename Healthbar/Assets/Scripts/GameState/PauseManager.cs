@@ -20,6 +20,7 @@ public class PauseManager : MonoBehaviour
     {
         if (PausePressed())
         {
+            GameMaster.Find<GenericAudio>().ButtonPressed();
             _master.Paused = !_master.Paused;
         }
         _pauseScreen.SetActive(_master.Paused);
@@ -33,6 +34,7 @@ public class PauseManager : MonoBehaviour
 
     public void ResumePressed()
     {
+        GameMaster.Find<GenericAudio>().ButtonPressed();
         _master.Paused = false;
     }
 }

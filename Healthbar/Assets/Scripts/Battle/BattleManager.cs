@@ -7,6 +7,9 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     private BattleOrderObject _battleOrder;
 
+    public delegate void NextBattleEvent();
+    public event NextBattleEvent OnNextBattle;
+
     private int _currentBattleIndex = 0;
     public int BattleNumber => _currentBattleIndex;
     private int _currentWaveIndex = 0;
@@ -37,6 +40,7 @@ public class BattleManager : MonoBehaviour
     {
         _currentWaveIndex = 0;
         _currentBattleIndex++;
+        OnNextBattle?.Invoke();
     }
 
     public void StateStart()

@@ -18,6 +18,7 @@ public class ShoppingStateManager : MonoBehaviour
     private BattleManager _battleManager;
     private InputController _inputController;
     private GameLog _gameLog;
+    private GenericAudio _audioSystem;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class ShoppingStateManager : MonoBehaviour
         _inputController = GameMaster.Find<InputController>();
         _gameLog = GameMaster.Find<GameLog>();
         _actionController = GameMaster.Find<ActionController>();
+        _audioSystem = GameMaster.Find<GenericAudio>();
     }
 
     // Update is called once per frame
@@ -64,6 +66,7 @@ public class ShoppingStateManager : MonoBehaviour
         }
 
         _shoppingScreen.SetActive(true);
+        _audioSystem.ShopOpen();
     }
 
     public void StateEnd()

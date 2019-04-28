@@ -12,6 +12,7 @@ public class ShoppingStateManager : MonoBehaviour
     private EnemyScript _enemy;
     private GameMaster _gameMaster;
     private BattleManager _battleManager;
+    private InputController _inputController;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class ShoppingStateManager : MonoBehaviour
         _enemy = GameMaster.Find<EnemyScript>();
         _gameMaster = GameMaster.Find<GameMaster>();
         _battleManager = GameMaster.Find<BattleManager>();
+        _inputController = GameMaster.Find<InputController>();
     }
 
     // Update is called once per frame
@@ -26,7 +28,10 @@ public class ShoppingStateManager : MonoBehaviour
     {
         if (_gameMaster.CurrentState == GameState.Shopping)
         {
-
+            if (_inputController.ConfirmPressed())
+            {
+                ShoppingDone();
+            }
         }
     }
 
@@ -38,6 +43,11 @@ public class ShoppingStateManager : MonoBehaviour
 
     public void StateStart()
     {
+        foreach(var action in _battleManager.GetCurrentBattle().PurchasableActions)
+        {
+            action.ParsePattern();
+        }
+
         _shoppingScreen.SetActive(true);
     }
 

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd777b6f66537de4d99d32af4641ee3c, type: 3}
   m_Name: LongBlock
   m_EditorClassIdentifier: 
-  _actionName: 
-  _patternString: RRR
+  _actionName: Long Block
+  _patternString: LLL
   _cooldown: 5
   _purchaseCost: 5
   _blockLength: 4

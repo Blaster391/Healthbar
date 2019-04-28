@@ -64,7 +64,6 @@ public class ActionController : ITickable
         {
             if (action.IsValidInput(_currentInputs.ToArray()))
             {
-                Debug.Log("Triggered " + action.ActionName);
                 action.Trigger();
                 valid = true;
             }

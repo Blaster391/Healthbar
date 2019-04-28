@@ -45,25 +45,42 @@ public class UIActionbar : MonoBehaviour
 
     private ActionController _actionController;
     private GameTimeManager _timeManager;
+    private BattleManager _battleManager;
 
     // Start is called before the first frame update
     void Start()
     {
         _actionController = GameMaster.Find<ActionController>();
         _timeManager = GameMaster.Find<GameTimeManager>();
+        _battleManager = GameMaster.Find<BattleManager>();
+    }
+
+    private BaseAction GetAction()
+    {
+        if (_shopItem)
+        {
+            return _battleManager.GetCurrentBattle().PurchasableActions[_index];
+        }
+
+        return _actionController.Actions[_index];
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(_index >= _actionController.Actions.Count)
+        if(!_shopItem &&  _index >= _actionController.Actions.Count)
         {
             _toggle.SetActive(false);
             _disabledScribble.SetActive(true);
             return;
         }
+        else if(_shopItem && _index >= _battleManager.GetCurrentBattle().PurchasableActions.Count)
+        {
+            _toggle.SetActive(false);
+            return;
+        }
 
-        var action = _actionController.Actions[_index];
+        var action = GetAction();
 
         _toggle.SetActive(true);
         _disabledScribble.SetActive(!action.IsActive());
@@ -81,7 +98,7 @@ public class UIActionbar : MonoBehaviour
 
     void UpdateCooldown()
     {
-        var action = _actionController.Actions[_index];
+        var action = GetAction();
         _cooldownText.text = action.CooldownLength.ToString();
         _cooldownImage.rectTransform.rotation = Quaternion.identity;
         _cooldownText.rectTransform.rotation = Quaternion.identity;
@@ -111,7 +128,7 @@ public class UIActionbar : MonoBehaviour
 
     void UpdateEffect()
     {
-        var action = _actionController.Actions[_index];
+        var action = GetAction();
         switch (action.ActionType())
         {
             case ActionType.Attack:
@@ -128,9 +145,11 @@ public class UIActionbar : MonoBehaviour
 
     void UpdateInputSymbols()
     {
+        var action = GetAction();
+
         for (int i = 0; i < _inputs.Length; ++i)
         {
-            var action = _actionController.Actions[_index];
+
 
             _effectText.text = action.EffectText();
 
@@ -155,7 +174,7 @@ public class UIActionbar : MonoBehaviour
 
     void SetImage(int idx, Sprite defaultSprite, Sprite activeSprite)
     {
-        var action = _actionController.Actions[_index];
+        var action = GetAction();
         var currentInput = _actionController.CurrentInputs;
 
         Image inputImage = _inputs[idx].GetComponent<Image>();
@@ -178,23 +197,6 @@ public class UIActionbar : MonoBehaviour
         {
             colour.a = 0.25f;
         }
-
-
-        //if (currentInput.Count > action.ActionPattern.Length)
-        //{
-        //    colour.a = 0.25f;
-        //}
-        //else
-        //{
-        //    //if (action.ActionPattern[idx] == currentInput[idx])
-        //    //{
-        //    //    inputImage.sprite = activeSprite;
-        //    //}
-        //    //else
-        //    //{ 
-        //    //    colour.a = 0.25f;
-        //    //}
-        //}
 
         inputImage.color = colour;
     }

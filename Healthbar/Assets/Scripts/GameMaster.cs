@@ -15,7 +15,7 @@ public enum GameState
 
 public class GameMaster : MonoBehaviour
 {
-    private GameState _state = GameState.Battling;
+    private GameState _state = GameState.WaveStarted;
     public GameState CurrentState => _state;
 
     public static T Find<T>()

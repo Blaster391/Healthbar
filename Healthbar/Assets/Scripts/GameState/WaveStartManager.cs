@@ -9,6 +9,9 @@ public class WaveStartManager : MonoBehaviour
     [SerializeField]
     private UIEnemy _uiEnemy;
     [SerializeField]
+    private UIMidSlider _uiMid;
+
+    [SerializeField]
     private GameObject _uiSpeechbubble;
     [SerializeField]
     private Text _uiSpeechText;
@@ -53,10 +56,19 @@ public class WaveStartManager : MonoBehaviour
             if(_currentAnnouncementTime < _announcementTime)
             {
                 _waveAnnouncementPanel.gameObject.SetActive(true);
-                float alpha = _currentAnnouncementTime / (_announcementTime / 2);
-                if(_currentAnnouncementTime > (_announcementTime / 2))
+
+                float quarterTime = (_announcementTime / 4);
+
+                float alpha = _currentAnnouncementTime / quarterTime;
+
+                if (_currentAnnouncementTime > quarterTime)
                 {
-                    alpha = 1 - (alpha - 1);
+                    alpha = 1; 
+                }
+
+                if(_currentAnnouncementTime > quarterTime * 3)
+                {
+                    alpha = 1 - (_currentAnnouncementTime - quarterTime * 3);
                 }
                 var panelColour = _waveAnnouncementPanel.color;
                 panelColour.a = alpha;
@@ -96,7 +108,14 @@ public class WaveStartManager : MonoBehaviour
                     if (_speechBubbleTime < 0)
                     {
                         _uiSpeechbubble.SetActive(false);
-                        _gameMaster.TransitionTo(GameState.Battling);
+                        if (!_uiMid.IsOnScreen())
+                        {
+                            _uiMid.SlideIn();
+                        }
+                        else
+                        {
+                            _gameMaster.TransitionTo(GameState.Battling);
+                        }
                     }
                 }
             }
@@ -109,6 +128,7 @@ public class WaveStartManager : MonoBehaviour
     {
         // _scrolling = true;
         _uiEnemy.ForceOffscreen();
+        _uiMid.ForceOffscreen();
 
         _enemy.Setup(GameMaster.Find<BattleManager>().GetCurrentWave());
        // _uiEnemy.MoveOnscreen();

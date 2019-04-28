@@ -7,7 +7,8 @@ public class WaveEndManager : MonoBehaviour
     [SerializeField]
     private UIEnemy _uiEnemy;
 
-
+    [SerializeField]
+    private UIMidSlider _uiMid;
 
     private PlayerScript _player;
     private EnemyScript _enemy;
@@ -37,14 +38,21 @@ public class WaveEndManager : MonoBehaviour
             }
             else
             {
-                if (_battleManager.OnFinalWaveOfBattle())
+                if (_uiMid.IsOnScreen())
                 {
-                    _gameMaster.TransitionTo(GameState.Shopping);
+                    _uiMid.SlideOut();
                 }
                 else
                 {
-                    _battleManager.NextWave();
-                    _gameMaster.TransitionTo(GameState.WaveStarted);
+                    if (_battleManager.OnFinalWaveOfBattle())
+                    {
+                        _gameMaster.TransitionTo(GameState.Shopping);
+                    }
+                    else
+                    {
+                        _battleManager.NextWave();
+                        _gameMaster.TransitionTo(GameState.WaveStarted);
+                    }
                 }
             }
 

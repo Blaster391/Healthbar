@@ -37,6 +37,6 @@ public class UIGeneric : MonoBehaviour
         _enemyNameText.text = _enemy.BaseEnemy.EnemyName;
         _playerNameText.text = "\"" + _player.PlayerName + "\"";
         _battleText.text = _battleManager.GetCurrentBattle().BattleName;
-        _waveNumberText.text = (_battleManager.WaveNumber + 1).ToString();
+        _waveNumberText.text = (_battleManager.WaveNumber + 1 + _battleManager.EndGameCount).ToString();
     }
 }

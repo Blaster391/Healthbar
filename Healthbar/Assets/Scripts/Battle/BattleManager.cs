@@ -15,6 +15,8 @@ public class BattleManager : MonoBehaviour
     private int _currentWaveIndex = 0;
     public int WaveNumber => _currentWaveIndex;
 
+    public int EndGameCount = 0;
+
     public BattleObject GetCurrentBattle()
     {
         return _battleOrder.GetBattle(_currentBattleIndex);
@@ -55,5 +57,10 @@ public class BattleManager : MonoBehaviour
         GameMaster.Find<GameTimeManager>().ResetTicks();
         GameMaster.Find<ActionController>().ResetCooldowns();
         GameMaster.Find<ActionController>().CurrentInputs.Clear();
+    }
+
+    public bool AtEndOfGame()
+    {
+        return OnFinalWaveOfBattle() && (_battleOrder.Battles.Count == (_currentBattleIndex + 1));
     }
 }

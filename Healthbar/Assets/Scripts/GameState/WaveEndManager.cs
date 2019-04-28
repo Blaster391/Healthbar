@@ -44,15 +44,25 @@ public class WaveEndManager : MonoBehaviour
                 }
                 else
                 {
-                    if (_battleManager.OnFinalWaveOfBattle())
+                    if (_battleManager.AtEndOfGame())
                     {
-                        _gameMaster.TransitionTo(GameState.Shopping);
+                        _battleManager.EndGameCount++;
+                        _gameMaster.TransitionTo(GameState.WaveStarted);
                     }
                     else
                     {
-                        _battleManager.NextWave();
-                        _gameMaster.TransitionTo(GameState.WaveStarted);
+                        if (_battleManager.OnFinalWaveOfBattle())
+                        {
+                            _gameMaster.TransitionTo(GameState.Shopping);
+                        }
+                        else
+                        {
+                            _battleManager.NextWave();
+                            _gameMaster.TransitionTo(GameState.WaveStarted);
+                        }
                     }
+
+
                 }
             }
 

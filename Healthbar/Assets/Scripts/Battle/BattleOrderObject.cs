@@ -7,6 +7,7 @@ public class BattleOrderObject : ScriptableObject
 {
     [SerializeField]
     private List<BattleObject> _battles;
+    public List<BattleObject> Battles => _battles;
 
     public BattleObject GetBattle(int idx)
     {

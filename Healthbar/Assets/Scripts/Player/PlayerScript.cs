@@ -13,6 +13,7 @@ public class PlayerScript : ITickable
     private string _playerName = "";
     public string PlayerName { get { return _playerName; } set{ _playerName = value; } }
 
+    [SerializeField]
     private int _maxHealth = 20;
     private int _currentHealth = 20;
     public int CurrentHealth => _currentHealth;

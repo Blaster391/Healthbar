@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123428d75fb8e9c40a65ac035372c95d, type: 3}
+  m_Name: TribesEnemyAppearance
+  m_EditorClassIdentifier: 
+  _idle1: {fileID: 21300000, guid: 22f9b4bb6ce852544a53999ed2d50caf, type: 3}
+  _idle2: {fileID: 21300000, guid: 6d06f0c44c9dd7f49b42f226bc0dca59, type: 3}
+  _attacking: {fileID: 21300000, guid: cbb294c5d14d8e549abe5ec5f2d507a5, type: 3}
+  _hurt: {fileID: 21300000, guid: e5a205db96e707247a47a0e414fc9ef9, type: 3}

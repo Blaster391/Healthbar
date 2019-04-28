@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd2f60d2aaeefa4f8c615d5370ead5e, type: 3}
+  m_Name: PaleolithicBattle
+  m_EditorClassIdentifier: 
+  _bgm: {fileID: 8300000, guid: 7c3c1d0992f65f24384a742448741996, type: 3}
+  _battleName: The Paleolithic Era
+  _waves:
+  - {fileID: 11400000, guid: 6aea881f092c5bb41bb3b9cfc8f81054, type: 2}
+  - {fileID: 11400000, guid: 55e4e568ea364d94398cd60ada5cc7fa, type: 2}
+  - {fileID: 11400000, guid: 2341cc3e9c4b770428f15d7895e1360a, type: 2}
+  _purchasableActions:
+  - {fileID: 11400000, guid: fc849aac6772a24478e769292f2787d3, type: 2}
+  - {fileID: 11400000, guid: 05aa638eef836f743bb4a58db4cc61e3, type: 2}
+  - {fileID: 11400000, guid: 7d9bee137aaa740439e6374187f64fe4, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b7c346b58e2874a88e3b75f365c210, type: 3}
   m_Name: BasicAttack
   m_EditorClassIdentifier: 
-  _actionName: Attack
+  _actionName: Basic Attack
   _patternString: R
   _cooldown: 1
   _purchaseCost: 1

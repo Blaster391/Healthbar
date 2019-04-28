@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123428d75fb8e9c40a65ac035372c95d, type: 3}
+  m_Name: NaturalDisasterEnemyAppearance
+  m_EditorClassIdentifier: 
+  _idle1: {fileID: 21300000, guid: 6eab95ea93c05524aaab189070e9e816, type: 3}
+  _idle2: {fileID: 21300000, guid: 6e94d6ead4c5596419b9be6088140d5a, type: 3}
+  _attacking: {fileID: 21300000, guid: 6f1fc3df3f0e46b42a67466bd02243ba, type: 3}
+  _hurt: {fileID: 21300000, guid: 18d3810a8620d4b44a422b54daa4bf20, type: 3}

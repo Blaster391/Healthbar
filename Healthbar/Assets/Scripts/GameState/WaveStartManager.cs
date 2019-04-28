@@ -74,7 +74,7 @@ public class WaveStartManager : MonoBehaviour
                     alpha = 1 - (_currentAnnouncementTime - quarterTime * 3);
                 }
                 var panelColour = _waveAnnouncementPanel.color;
-                panelColour.a = alpha;
+                panelColour.a = alpha * 0.75f;
                 _waveAnnouncementPanel.color = panelColour;
 
                _currentAnnouncementTime += Time.deltaTime;

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd777b6f66537de4d99d32af4641ee3c, type: 3}
   m_Name: BasicBlock
   m_EditorClassIdentifier: 
-  _actionName: Block
+  _actionName: Basic Block
   _patternString: L
-  _cooldown: 4
-  _purchaseCost: 2
-  _blockLength: 2
-  _blockStrength: 2
+  _cooldown: 1
+  _purchaseCost: 1
+  _blockLength: 1
+  _blockStrength: 1

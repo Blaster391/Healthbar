@@ -76,7 +76,7 @@ public class ActionController : ITickable
 
         if (valid)
         {
-            GameMaster.Find<GenericAudio>().ButtonPressed();
+            GameMaster.Find<GenericAudio>().ButtonSuccess();
         }
         else
         {

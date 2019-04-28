@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6703432bf247334382c8792739aa8b4, type: 3}
-  m_Name: TestEnemy
+  m_Name: PeasantsEnemy
   m_EditorClassIdentifier: 
-  _enterSound: {fileID: 0}
-  _enemyName: Jeff
-  _enemyDialogue: mah name jeff
-  _appearance: {fileID: 11400000, guid: c7b0b1e9d8432184684a24c97ac88c4d, type: 2}
+  _enterSound: {fileID: 8300000, guid: 9698ddf4479600147afa90993c337bce, type: 3}
+  _enemyName: A Peasant Uprising
+  _enemyDialogue: 
+  _appearance: {fileID: 11400000, guid: 76e51e7c0bad0d0498408138c33b0f7a, type: 2}
   _maxHealth: 10
-  _attackPatternString: x-x-x-1-x-1-x-x
+  _attackPatternString: x-x-x-x-x-x-x-x

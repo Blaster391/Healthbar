@@ -22,7 +22,6 @@ public class BasicBlock : BaseAction
 
     protected override void TriggerCore()
     {
-        Debug.Log("Am block");
         //One because will count down on first tick
         Player.EnableBlock(_blockLength + 1, _blockStrength);
     }

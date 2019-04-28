@@ -15,6 +15,8 @@ public class GenericAudio : MonoBehaviour
     [SerializeField]
     private AudioClip _buttonPressedSound;
     [SerializeField]
+    private AudioClip _buttonSuccessSound;
+    [SerializeField]
     private AudioClip _buttonFailedSound;
 
     [SerializeField]
@@ -137,8 +139,11 @@ public class GenericAudio : MonoBehaviour
 
     public void EnemyEnterSound()
     {
-        _enemySoundSource.clip = GameMaster.Find<BattleManager>().GetCurrentWave().EnterSound;
-        _enemySoundSource.Play();
+        if(GameMaster.Find<BattleManager>().GetCurrentWave().EnterSound != null)
+        {
+            _enemySoundSource.clip = GameMaster.Find<BattleManager>().GetCurrentWave().EnterSound;
+            _enemySoundSource.Play();
+        }
     }
 
     public void BuySound()
@@ -150,6 +155,12 @@ public class GenericAudio : MonoBehaviour
     public void ButtonPressed()
     {
         _genericSource.clip = _buttonPressedSound;
+        _genericSource.Play();
+    }
+
+    public void ButtonSuccess()
+    {
+        _genericSource.clip = _buttonSuccessSound;
         _genericSource.Play();
     }
 

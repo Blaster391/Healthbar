@@ -73,8 +73,6 @@ public class UIMidSlider : MonoBehaviour
 
     public void ForceOffscreen()
     {
-
-        Debug.Log("Offscreeeee");
         Vector3 newPos = _image.rectTransform.position;
         newPos.y = _initialY + _offscreenDistance;
         _image.rectTransform.position = newPos;

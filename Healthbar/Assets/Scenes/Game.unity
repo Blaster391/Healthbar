@@ -1285,8 +1285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000076293945, y: 19}
-  m_SizeDelta: {x: -0.7, y: -61.5}
+  m_AnchoredPosition: {x: 3.199997, y: 19}
+  m_SizeDelta: {x: 107.4, y: -61.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &452809227
 MonoBehaviour:
@@ -2898,6 +2898,7 @@ MonoBehaviour:
   _shopOpenSound: {fileID: 8300000, guid: 2246d4e3b8016f946a1ad6440df2c45e, type: 3}
   _buySound: {fileID: 8300000, guid: 00c4a8cba8360364380d2dc484556ad2, type: 3}
   _buttonPressedSound: {fileID: 8300000, guid: 9698ddf4479600147afa90993c337bce, type: 3}
+  _buttonSuccessSound: {fileID: 8300000, guid: a4ef1b1b95ac57a49a6118af037f79ef, type: 3}
   _buttonFailedSound: {fileID: 8300000, guid: b4192191ab2d839499dd247754c7b8d7, type: 3}
   _metronomeSound: {fileID: 8300000, guid: 289deec79a6c7e540a4ce2b4c9370fe7, type: 3}
   _metronomeSoundSource: {fileID: 1602445306}
@@ -6769,8 +6770,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -243, y: 70.425}
-  m_SizeDelta: {x: 347.3, y: 125.15}
+  m_AnchoredPosition: {x: -233.45007, y: 70.42499}
+  m_SizeDelta: {x: 445.7, y: 125.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1595867319
 MonoBehaviour:
@@ -6844,8 +6845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 197.8, y: 71.1}
-  m_SizeDelta: {x: 327, y: 76.1}
+  m_AnchoredPosition: {x: 227.6, y: 71.1001}
+  m_SizeDelta: {x: 430.7, y: 76.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597999177
 MonoBehaviour:
@@ -7532,8 +7533,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.19993591, y: -22}
-  m_SizeDelta: {x: -0.39999, y: -64.65}
+  m_AnchoredPosition: {x: 5.8, y: -22}
+  m_SizeDelta: {x: 186, y: -64.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1647434407
 MonoBehaviour:
@@ -7557,10 +7558,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: f138b6cf25254b445b2038c53d9c8e68, type: 3}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -7568,7 +7569,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EnemyName
+  m_Text: A BUNCH OF TREBUCHETS
 --- !u!222 &1647434408
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10447,10 +10448,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 816891242, guid: 97fbc3f9d4dfc4d4b8bed8693289e17a, type: 3}
+      propertyPath: _playerName
+      value: The Squig
+      objectReference: {fileID: 0}
+    - target: {fileID: 816891242, guid: 97fbc3f9d4dfc4d4b8bed8693289e17a, type: 3}
+      propertyPath: _maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 816891241, guid: 97fbc3f9d4dfc4d4b8bed8693289e17a, type: 3}
       propertyPath: _actions.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 816891245, guid: 97fbc3f9d4dfc4d4b8bed8693289e17a, type: 3}
+      propertyPath: _battleOrder
+      value: 
+      objectReference: {fileID: 11400000, guid: 9099db5ef097fa34d8142d50f60da8df,
+        type: 2}
     - target: {fileID: 6523693044369028004, guid: 97fbc3f9d4dfc4d4b8bed8693289e17a,
         type: 3}
       propertyPath: _shoppingScreen

@@ -66,7 +66,7 @@ public class GameOverStateManager : MonoBehaviour
                 _logText.text += "\n";
                 _logText.text += "\n";
                 
-                _logText.text += $"It was vanquished by a {_battleManager.GetCurrentWave().EnemyName}";
+                _logText.text += $"It was vanquished by {_battleManager.GetCurrentWave().EnemyName}";
 
                 _logText.text += "\n";
                 _logText.text += "\n";

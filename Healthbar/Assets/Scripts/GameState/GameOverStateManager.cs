@@ -12,7 +12,7 @@ public class GameOverStateManager : MonoBehaviour
 
 
     [SerializeField]
-    public GameObject _gameOverScreen;
+    public Image _gameOverScreen;
     [SerializeField]
     public GameObject _exitButton;
     [SerializeField]
@@ -27,7 +27,7 @@ public class GameOverStateManager : MonoBehaviour
     private EnemyScript _enemy;
     private PlayerScript _player;
     private GameMaster _gameMaster;
-    private GameLog gameLog;
+    private GameLog _gameLog;
 
     void Start()
     {
@@ -35,6 +35,7 @@ public class GameOverStateManager : MonoBehaviour
         _enemy = GameMaster.Find<EnemyScript>();
         _gameMaster = GameMaster.Find<GameMaster>();
         _battleManager = GameMaster.Find<BattleManager>();
+        _gameLog = GameMaster.Find<GameLog>();
     }
 
     // Update is called once per frame
@@ -42,9 +43,45 @@ public class GameOverStateManager : MonoBehaviour
     {
         if (_gameMaster.CurrentState == GameState.GameOver)
         {
-            if(_fadeTime < _currentFadeTime)
+            if(_currentFadeTime < _fadeTime)
             {
+                _currentFadeTime += Time.deltaTime;
+                float alpha = _currentFadeTime / _fadeTime;
+                var newColour = _gameOverScreen.color;
+                newColour.a = alpha;
+                _gameOverScreen.color = newColour;
 
+                newColour = _gameOverText.color;
+                newColour.a = alpha;
+                _gameOverText.color = newColour;
+
+                newColour = _logText.color;
+                newColour.a = alpha;
+                _logText.color = newColour;
+
+
+                _gameOverText.text = $"{_player.PlayerName} has been slain!";
+
+                _logText.text = $"The beast defeated {_gameLog.EnemiesDefeated} opponents";
+                _logText.text += "\n";
+                _logText.text += "\n";
+                
+                _logText.text += $"It was vanquished by a {_battleManager.GetCurrentWave().EnemyName}";
+
+                _logText.text += "\n";
+                _logText.text += "\n";
+
+                _logText.text += $"Legends say that it won in the battles of \n";
+
+                if(_gameLog.BattlesWon.Count == 0)
+                {
+                    _logText.text += $"Nothing \n";
+                }
+
+                foreach(var battle in _gameLog.BattlesWon)
+                {
+                    _logText.text += $"{battle} \n";
+                }
             }
             else
             {
@@ -57,14 +94,14 @@ public class GameOverStateManager : MonoBehaviour
     public void StateStart()
     {
         _currentFadeTime = 0;
-        _gameOverScreen.SetActive(true);
+        _gameOverScreen.gameObject.SetActive(true);
         _exitButton.SetActive(false);
         _playAgainButton.SetActive(false);
     }
 
     public void StateEnd()
     {
-        _gameOverScreen.SetActive(false);
+        _gameOverScreen.gameObject.SetActive(false);
         _exitButton.SetActive(false);
         _playAgainButton.SetActive(false);
     }

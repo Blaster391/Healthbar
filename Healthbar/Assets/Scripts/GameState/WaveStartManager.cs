@@ -56,7 +56,7 @@ public class WaveStartManager : MonoBehaviour
                 float alpha = _currentAnnouncementTime / (_announcementTime / 2);
                 if(_currentAnnouncementTime > (_announcementTime / 2))
                 {
-                    alpha = 1 - (_currentAnnouncementTime - 1);
+                    alpha = 1 - (alpha - 1);
                 }
                 var panelColour = _waveAnnouncementPanel.color;
                 panelColour.a = alpha;

@@ -13,6 +13,7 @@ public class ShoppingStateManager : MonoBehaviour
     private GameMaster _gameMaster;
     private BattleManager _battleManager;
     private InputController _inputController;
+    private GameLog _gameLog;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class ShoppingStateManager : MonoBehaviour
         _gameMaster = GameMaster.Find<GameMaster>();
         _battleManager = GameMaster.Find<BattleManager>();
         _inputController = GameMaster.Find<InputController>();
+        _gameLog = GameMaster.Find<GameLog>();
     }
 
     // Update is called once per frame
@@ -37,6 +39,7 @@ public class ShoppingStateManager : MonoBehaviour
 
     public void ShoppingDone()
     {
+        _gameLog.Log(_battleManager.GetCurrentBattle());
         _battleManager.NextBattle();
         _gameMaster.TransitionTo(GameState.WaveStarted);
     }

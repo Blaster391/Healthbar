@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class GameLog : MonoBehaviour
 {
-    public List<BattleObject> BattlesWon { get; set; } = new List<BattleObject>();
-    public EnemyObject DefeatedBy { get; set; }
+    public int EnemiesDefeated { get; private set; } = 0;
+    public List<string> BattlesWon { get; private set; } = new List<string>();
+
+    public void Log(EnemyObject _enemy)
+    {
+        EnemiesDefeated++;
+    }
+
+    public void Log(BattleObject _enemy)
+    {
+        BattlesWon.Add(_enemy.BattleName);
+    }
 }

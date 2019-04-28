@@ -8,11 +8,13 @@ public class WaveEndManager : MonoBehaviour
     private UIEnemy _uiEnemy;
 
 
+
     private PlayerScript _player;
     private EnemyScript _enemy;
     private BattleManager _battleManager;
     private GameMaster _gameMaster;
     private GameTimeManager _timeManager;
+    private GameLog _gameLog;
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class WaveEndManager : MonoBehaviour
         _battleManager = GameMaster.Find<BattleManager>();
         _gameMaster = GameMaster.Find<GameMaster>();
         _timeManager = GameMaster.Find<GameTimeManager>();
+        _gameLog = GameMaster.Find<GameLog>();
     }
 
     // Update is called once per frame
@@ -55,6 +58,7 @@ public class WaveEndManager : MonoBehaviour
 
         //Turn off blocking
         _player.EnableBlock(0, 0);
+        _gameLog.Log(_battleManager.GetCurrentWave());
     }
 
     public void StateEnd()

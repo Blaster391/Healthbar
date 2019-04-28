@@ -149,4 +149,11 @@ public class UIEnemy : MonoBehaviour
         _moveOnscreen = true;
     }
 
+    public void ForceOffscreen()
+    {
+        _offscreen = true;
+        Vector3 newPos = _enemyImage.transform.position;
+        newPos.x = _initialX + _offscreenDistance;
+        _enemyImage.transform.position = newPos;
+    }
 }

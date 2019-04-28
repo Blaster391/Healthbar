@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -15,8 +16,10 @@ public enum GameState
 
 public class GameMaster : MonoBehaviour
 {
-    private GameState _state = GameState.WaveStarted;
+    private GameState _state = GameState.Menu;
     public GameState CurrentState => _state;
+
+    public bool Paused { get; set; }
 
     public static T Find<T>()
     {
@@ -80,5 +83,17 @@ public class GameMaster : MonoBehaviour
     public void GameOver()
     {
         TransitionTo(GameState.GameOver);
+    }
+
+    public void RestartAll()
+    {
+        TransitionTo(GameState.Menu);
+        //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+        SceneManager.LoadScene(0);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

@@ -11,7 +11,7 @@ public class PlayerScript : ITickable
 
     [SerializeField]
     private string _playerName = "";
-    public string PlayerName { get { return _playerName; } }
+    public string PlayerName { get { return _playerName; } set{ _playerName = value; } }
 
     private int _maxHealth = 20;
     private int _currentHealth = 20;
@@ -54,7 +54,7 @@ public class PlayerScript : ITickable
         if (IsBlocking())
         {
             damage -= _blockStrength;
-            if(damage < 0)
+            if(damage <= 0)
             {
                 damage = 0;
                 _hurtThisBeat = false;

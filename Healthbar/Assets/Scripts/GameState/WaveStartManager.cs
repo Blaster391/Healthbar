@@ -14,14 +14,27 @@ public class WaveStartManager : MonoBehaviour
     private Text _uiSpeechText;
 
     [SerializeField]
-    private float _speechTime;
+    private Image _waveAnnouncementPanel;
+    [SerializeField]
+    private Text _waveAnnouncementText;
+    [SerializeField]
+    private Text _battleAnnouncementText;
 
+    [SerializeField]
+    private float _speechTime = 3;
+    [SerializeField]
+    float _announcementTime = 5;
+
+
+    private float _currentAnnouncementTime = 0;
     private float _speechBubbleTime = 0;
 
     private PlayerScript _player;
     private EnemyScript _enemy;
     private GameMaster _gameMaster;
     private InputController _inputController;
+    private BattleManager _battleManager;
+
 
     void Start()
     {
@@ -29,6 +42,7 @@ public class WaveStartManager : MonoBehaviour
         _enemy = GameMaster.Find<EnemyScript>();
         _gameMaster = GameMaster.Find<GameMaster>();
         _inputController = GameMaster.Find<InputController>();
+        _battleManager = GameMaster.Find<BattleManager>();
     }
 
     // Update is called once per frame
@@ -36,25 +50,54 @@ public class WaveStartManager : MonoBehaviour
     {
         if(_gameMaster.CurrentState == GameState.WaveStarted)
         {
-            if (_uiEnemy.IsOffscreen())
+            if(_currentAnnouncementTime < _announcementTime)
             {
-                _uiEnemy.MoveOnscreen();
+                _waveAnnouncementPanel.gameObject.SetActive(true);
+                float alpha = _currentAnnouncementTime / (_announcementTime / 2);
+                if(_currentAnnouncementTime > (_announcementTime / 2))
+                {
+                    alpha = 1 - (_currentAnnouncementTime - 1);
+                }
+                var panelColour = _waveAnnouncementPanel.color;
+                panelColour.a = alpha;
+                _waveAnnouncementPanel.color = panelColour;
+
+               _currentAnnouncementTime += Time.deltaTime;
+
+                _battleAnnouncementText.text = _battleManager.GetCurrentBattle().BattleName;
+                _waveAnnouncementText.text = "Wave " + (_battleManager.WaveNumber + 1).ToString();
+
+                var textColour = _battleAnnouncementText.color;
+                textColour.a = alpha;
+                _battleAnnouncementText.color = textColour;
+
+                textColour = _waveAnnouncementText.color;
+                textColour.a = alpha;
+                _waveAnnouncementText.color = textColour;
             }
             else
             {
-                _uiSpeechbubble.SetActive(true);
-                _speechBubbleTime -= Time.deltaTime;
-                _uiSpeechText.text = _enemy.BaseEnemy.EnemyDialogue;
-
-                if (_inputController.ConfirmPressed())
+                _waveAnnouncementPanel.gameObject.SetActive(false);
+                if (_uiEnemy.IsOffscreen())
                 {
-                    _speechBubbleTime = -1;
+                    _uiEnemy.MoveOnscreen();
                 }
-
-                if(_speechBubbleTime < 0)
+                else
                 {
-                    _uiSpeechbubble.SetActive(false);
-                    _gameMaster.TransitionTo(GameState.Battling);
+                    _uiSpeechbubble.SetActive(true);
+                    _speechBubbleTime -= Time.deltaTime;
+                    _uiSpeechText.text = _enemy.BaseEnemy.EnemyDialogue;
+
+                    if (_inputController.ConfirmPressed())
+                    {
+                        _speechBubbleTime = -1;
+                    }
+
+                    if (_speechBubbleTime < 0)
+                    {
+                        _uiSpeechbubble.SetActive(false);
+                        _gameMaster.TransitionTo(GameState.Battling);
+                    }
                 }
             }
         }
@@ -65,13 +108,16 @@ public class WaveStartManager : MonoBehaviour
     public void StateStart()
     {
         // _scrolling = true;
+        _uiEnemy.ForceOffscreen();
+
         _enemy.Setup(GameMaster.Find<BattleManager>().GetCurrentWave());
-        _uiEnemy.MoveOnscreen();
+       // _uiEnemy.MoveOnscreen();
         _speechBubbleTime = _speechTime;
     }
 
     public void StateEnd()
     {
         _uiSpeechbubble.SetActive(false);
+        _waveAnnouncementPanel.gameObject.SetActive(false);
     }
 }

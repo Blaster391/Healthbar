@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: 2b1b6512d28a23742be868a6149f392f, type: 3}
   _enemyName: A Lone Bear
-  _enemyDialogue: 
+  _enemyDialogue: '*sweats nervously* H-h-hey, let''s try this one again?! =w='
   _appearance: {fileID: 11400000, guid: 27e0e71c7ee9da74ab255c0d00349c67, type: 2}
   _maxHealth: 25
   _attackPatternString: x-x-x-10-x-x-x-10

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: 02b3ee9b3c1192b4cb9044673b9e66f1, type: 3}
   _enemyName: The Roman Legion
-  _enemyDialogue: 
+  _enemyDialogue: BY THE GODS! Soldiers! The emperor will want this one for the colloseum...
   _appearance: {fileID: 11400000, guid: 4e74a0aa3acc76b488695382ed2637a0, type: 2}
   _maxHealth: 22
   _attackPatternString: x-x-3-3-x-x-3-3

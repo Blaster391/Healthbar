@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: 55a89dbc228e6a54a96ed8f4084dd541, type: 3}
   _enemyName: Nuclear Tensions
-  _enemyDialogue: 
+  _enemyDialogue: This is getting a little out of hand.
   _appearance: {fileID: 11400000, guid: 76e69faca7145b14abe3bf551d1ebce6, type: 2}
   _maxHealth: 100
   _attackPatternString: x-x-x-x-x-x-x-40

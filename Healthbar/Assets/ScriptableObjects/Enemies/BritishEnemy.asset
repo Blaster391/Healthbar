@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: d8bb348e1594ed144b60a7208bd74e70, type: 3}
   _enemyName: The British
-  _enemyDialogue: 
+  _enemyDialogue: '...'
   _appearance: {fileID: 11400000, guid: 57c8408e75fe50a4282b92373895af90, type: 2}
   _maxHealth: 40
   _attackPatternString: x-3-x-5-x-3-x-5

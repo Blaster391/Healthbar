@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: ae895c6a4de9a9341960749cd26202e9, type: 3}
   _enemyName: The Robot Uprising
-  _enemyDialogue: 
+  _enemyDialogue: Rate 5 stars or suffer the same fate as the humans!
   _appearance: {fileID: 11400000, guid: bde18ab90b1e794448ca48e30d5d7956, type: 2}
   _maxHealth: 250
   _attackPatternString: x-x-5-10-15-x-x-50

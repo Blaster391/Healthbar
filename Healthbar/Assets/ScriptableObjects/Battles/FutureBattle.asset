@@ -15,6 +15,6 @@ MonoBehaviour:
   _bgm: {fileID: 8300000, guid: 8706a1f5c393f8f4890c4358ef6dd43c, type: 3}
   _battleName: The Future
   _waves:
-  - {fileID: 11400000, guid: 4d681ef3551634d4d9d4a2ad885cc7eb, type: 2}
+  - {fileID: 11400000, guid: 160ce02947bd54e20b2a98c285c81640, type: 2}
   - {fileID: 11400000, guid: 6eb374348fab79a499bb76428883ddbe, type: 2}
   _purchasableActions: []

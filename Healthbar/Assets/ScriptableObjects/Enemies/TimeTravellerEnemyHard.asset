@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6703432bf247334382c8792739aa8b4, type: 3}
-  m_Name: TimeTravellerEnemy
+  m_Name: TimeTravellerEnemyHard
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: 4cb4a641393a0a04ea6a3189768aabe9, type: 3}
   _enemyName: The Time Traveller
-  _enemyDialogue: Oh, not you again!
+  _enemyDialogue: Ooh, interesting. Nice to meet you! May I collect a piece of you
+    for my experiments?
   _appearance: {fileID: 11400000, guid: ee6ecbb25fab99043a544ee45bf733c3, type: 2}
   _maxHealth: 12
-  _attackPatternString: x-x-1-2-x-x-x-3
+  _attackPatternString: x-x-8-2-x-1-1-3

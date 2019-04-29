@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: 77ccb859fa9720143a431f60e216e670, type: 3}
   _enemyName: A Peasant Uprising
-  _enemyDialogue: 
+  _enemyDialogue: Ere, is you the one that's been destroying our crops?!
   _appearance: {fileID: 11400000, guid: 76e51e7c0bad0d0498408138c33b0f7a, type: 2}
   _maxHealth: 40
   _attackPatternString: x-1-1-1-x-2-2-2

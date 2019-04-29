@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: 0d0fe2100e7d9bd4585bb85d27d41c67, type: 3}
   _enemyName: Some Missionaries
-  _enemyDialogue: 
+  _enemyDialogue: Do you have a moment to talk about our Lord and saviour?
   _appearance: {fileID: 11400000, guid: c7b3b5eec37848f4cacfffef745949a2, type: 2}
   _maxHealth: 34
   _attackPatternString: x-x-4-x-4-x-4-x

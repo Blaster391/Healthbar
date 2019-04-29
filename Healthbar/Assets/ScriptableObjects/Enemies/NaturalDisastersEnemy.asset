@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: d08ed71e0c3173f40a9a64d9441962d1, type: 3}
   _enemyName: Natural Disasters
-  _enemyDialogue: BANG
+  _enemyDialogue: '*dangerous noises*'
   _appearance: {fileID: 11400000, guid: d9bca4effb05747488eed2431193d955, type: 2}
   _maxHealth: 10
   _attackPatternString: x-x-x-2-x-x-x-2

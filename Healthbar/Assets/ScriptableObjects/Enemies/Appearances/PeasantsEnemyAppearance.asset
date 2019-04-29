@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123428d75fb8e9c40a65ac035372c95d, type: 3}
   m_Name: PeasantsEnemyAppearance
   m_EditorClassIdentifier: 
-  _idle1: {fileID: 0}
-  _idle2: {fileID: 0}
-  _attacking: {fileID: 0}
-  _hurt: {fileID: 0}
+  _idle1: {fileID: 21300000, guid: 3dfed7327d0b6964f8853e0543f48559, type: 3}
+  _idle2: {fileID: 21300000, guid: 224f5ad51a2c2ea48a7ce0832f46eafb, type: 3}
+  _attacking: {fileID: 21300000, guid: db208f0905b18b046b0d6f45f64b03e8, type: 3}
+  _hurt: {fileID: 21300000, guid: 24268dfb2d3534a44816d2472e64b2d6, type: 3}

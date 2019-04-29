@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123428d75fb8e9c40a65ac035372c95d, type: 3}
   m_Name: LegionariesEnemyAppearance
   m_EditorClassIdentifier: 
-  _idle1: {fileID: 0}
-  _idle2: {fileID: 0}
-  _attacking: {fileID: 0}
-  _hurt: {fileID: 0}
+  _idle1: {fileID: 21300000, guid: 8641fd4d8d502cd44a18e26984f3ae77, type: 3}
+  _idle2: {fileID: 21300000, guid: 5b35621bb0372d346a275425e28d5f39, type: 3}
+  _attacking: {fileID: 21300000, guid: 8a52eb33d878f774fb8dc19b9a4a53bc, type: 3}
+  _hurt: {fileID: 21300000, guid: 292fc3a5b0ea5cf47b5917b061b74f41, type: 3}

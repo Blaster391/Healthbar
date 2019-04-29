@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123428d75fb8e9c40a65ac035372c95d, type: 3}
   m_Name: TrebuchestEnemyAppearance
   m_EditorClassIdentifier: 
-  _idle1: {fileID: 0}
-  _idle2: {fileID: 0}
-  _attacking: {fileID: 0}
-  _hurt: {fileID: 0}
+  _idle1: {fileID: 21300000, guid: 26a18bd7458992940823a63fe1460e82, type: 3}
+  _idle2: {fileID: 21300000, guid: ea5474857cdfa3943b748d789b45045a, type: 3}
+  _attacking: {fileID: 21300000, guid: bea47d9f3a8455c4a90b4d31cb2e6964, type: 3}
+  _hurt: {fileID: 21300000, guid: 93d57605a7568f9499fb0268c8c43eb0, type: 3}

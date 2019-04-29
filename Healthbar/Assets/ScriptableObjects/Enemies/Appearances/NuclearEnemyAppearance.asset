@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123428d75fb8e9c40a65ac035372c95d, type: 3}
   m_Name: NuclearEnemyAppearance
   m_EditorClassIdentifier: 
-  _idle1: {fileID: 0}
-  _idle2: {fileID: 0}
-  _attacking: {fileID: 0}
-  _hurt: {fileID: 0}
+  _idle1: {fileID: 21300000, guid: 76cadfc3669eba342a73889a552d45bc, type: 3}
+  _idle2: {fileID: 21300000, guid: 2a6bfaa69d16d06409c522c00987f108, type: 3}
+  _attacking: {fileID: 21300000, guid: baec171b9e0e8454997f34bf092ac600, type: 3}
+  _hurt: {fileID: 21300000, guid: 9b225284860694f40b6d83c41eff0cc9, type: 3}

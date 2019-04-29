@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FungiEnemy
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: 9698ddf4479600147afa90993c337bce, type: 3}
-  _enemyName: A Wierd Fungus
+  _enemyName: Another Wierd Fungus
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: 68bc81d7372dd65479ad2a5c208c2247, type: 2}
-  _maxHealth: 10
-  _attackPatternString: x-x-x-x-x-x-x-x
+  _maxHealth: 3
+  _attackPatternString: x-x-x-1-x-x-x-x

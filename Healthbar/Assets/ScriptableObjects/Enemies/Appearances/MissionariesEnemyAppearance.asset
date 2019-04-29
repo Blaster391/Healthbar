@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123428d75fb8e9c40a65ac035372c95d, type: 3}
   m_Name: MissionariesEnemyAppearance
   m_EditorClassIdentifier: 
-  _idle1: {fileID: 0}
-  _idle2: {fileID: 0}
-  _attacking: {fileID: 0}
-  _hurt: {fileID: 0}
+  _idle1: {fileID: 21300000, guid: 29f3bdd1d0167f84490c5fcb1164dbce, type: 3}
+  _idle2: {fileID: 21300000, guid: f2e6c156d0fa3a24a8e91c0f50b83ed7, type: 3}
+  _attacking: {fileID: 21300000, guid: a0d9d7238420f0a4e92a523e6e231574, type: 3}
+  _hurt: {fileID: 21300000, guid: 900813799d70d174684b3de54a19905d, type: 3}

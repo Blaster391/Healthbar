@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd2f60d2aaeefa4f8c615d5370ead5e, type: 3}
   m_Name: ModernBattle
   m_EditorClassIdentifier: 
-  _bgm: {fileID: 8300000, guid: 7c3c1d0992f65f24384a742448741996, type: 3}
+  _bgm: {fileID: 8300000, guid: 1498a5e39562ae340b4bc7476c01f7c1, type: 3}
   _battleName: The Modern Age
-  _waves: []
+  _waves:
+  - {fileID: 11400000, guid: 718e9590a027bec4bae4d57621f52e8e, type: 2}
+  - {fileID: 11400000, guid: 7cae967fbcf1df140b1a1a3a20669f9c, type: 2}
+  - {fileID: 11400000, guid: bb0c1ed34e614a041b32a41e1e662031, type: 2}
+  - {fileID: 11400000, guid: 1308fa1d60d88074abd36f1bcb5c63e2, type: 2}
   _purchasableActions: []

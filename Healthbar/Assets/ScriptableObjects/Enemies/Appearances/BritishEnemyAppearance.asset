@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123428d75fb8e9c40a65ac035372c95d, type: 3}
   m_Name: BritishEnemyAppearance
   m_EditorClassIdentifier: 
-  _idle1: {fileID: 0}
-  _idle2: {fileID: 0}
-  _attacking: {fileID: 0}
-  _hurt: {fileID: 0}
+  _idle1: {fileID: 21300000, guid: 88c8932bd41614a45870ea748ac6a400, type: 3}
+  _idle2: {fileID: 21300000, guid: 7f345ce46b865664c8b0b3f365c1f506, type: 3}
+  _attacking: {fileID: 21300000, guid: b9c4c08c7464426449efa06fa36d2c70, type: 3}
+  _hurt: {fileID: 21300000, guid: c6940bc43cee29e4ba87a11c0ab389a5, type: 3}

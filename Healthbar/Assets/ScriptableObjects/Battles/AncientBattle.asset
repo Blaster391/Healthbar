@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bgm: {fileID: 8300000, guid: 7c3c1d0992f65f24384a742448741996, type: 3}
   _battleName: Ancient Times
-  _waves: []
+  _waves:
+  - {fileID: 11400000, guid: 152f1971920821542a9840f1adf76bc9, type: 2}
+  - {fileID: 11400000, guid: d2080af1711c95e4d95555c6daf34dac, type: 2}
+  - {fileID: 11400000, guid: 4d681ef3551634d4d9d4a2ad885cc7eb, type: 2}
+  - {fileID: 11400000, guid: 8932b76c05969844086e36f5b4348dcf, type: 2}
   _purchasableActions: []

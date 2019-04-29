@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b7c346b58e2874a88e3b75f365c210, type: 3}
   m_Name: KrakenAttack
   m_EditorClassIdentifier: 
-  _actionName: 
-  _patternString: R
-  _cooldown: 1
-  _purchaseCost: 1
-  _damage: 1
+  _actionName: Kraken Whip
+  _patternString: RLLR
+  _cooldown: 4
+  _purchaseCost: 4
+  _damage: 8

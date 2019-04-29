@@ -16,4 +16,4 @@ MonoBehaviour:
   _patternString: RR
   _cooldown: 4
   _purchaseCost: 10
-  _damage: 10
+  _damage: 4

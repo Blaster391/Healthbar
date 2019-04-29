@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionName: Kraken Shell
   _patternString: LLLRL
-  _cooldown: 1
-  _purchaseCost: 1
-  _blockLength: 1
+  _cooldown: 3
+  _purchaseCost: 20
+  _blockLength: 3
   _blockStrength: 50

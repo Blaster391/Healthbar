@@ -1843,7 +1843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -431.7, y: 219.6}
+  m_AnchoredPosition: {x: -431.7, y: 206}
   m_SizeDelta: {x: 200.8, y: 77.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512880892
@@ -1879,7 +1879,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ACTIONS
+  m_Text: COMBOS
 --- !u!222 &512880893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6549,7 +6549,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Action
+  m_Text: Combo
 --- !u!222 &1560815153
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9421,8 +9421,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyImage: {fileID: 2005833264}
   _attackSignalImage: {fileID: 1254439822}
-  _speed: 900
-  _offscreenDistance: 900
+  _speed: 1200
+  _offscreenDistance: 1200
 --- !u!114 &2005833264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10493,7 +10493,7 @@ PrefabInstance:
     - target: {fileID: 5339162315667749952, guid: 97fbc3f9d4dfc4d4b8bed8693289e17a,
         type: 3}
       propertyPath: _speechTime
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5339162315667749952, guid: 97fbc3f9d4dfc4d4b8bed8693289e17a,
         type: 3}

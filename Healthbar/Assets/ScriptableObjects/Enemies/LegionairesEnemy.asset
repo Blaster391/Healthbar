@@ -16,5 +16,5 @@ MonoBehaviour:
   _enemyName: The Roman Legion
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: 4e74a0aa3acc76b488695382ed2637a0, type: 2}
-  _maxHealth: 20
+  _maxHealth: 22
   _attackPatternString: x-x-3-3-x-x-3-3

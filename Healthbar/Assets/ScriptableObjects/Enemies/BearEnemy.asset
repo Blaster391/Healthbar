@@ -16,5 +16,5 @@ MonoBehaviour:
   _enemyName: A Lone Bear
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: 27e0e71c7ee9da74ab255c0d00349c67, type: 2}
-  _maxHealth: 10
+  _maxHealth: 15
   _attackPatternString: x-x-x-5-x-x-x-5

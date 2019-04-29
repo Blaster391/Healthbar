@@ -16,5 +16,5 @@ MonoBehaviour:
   _enemyName: The Robot Uprising
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: bde18ab90b1e794448ca48e30d5d7956, type: 2}
-  _maxHealth: 10
+  _maxHealth: 250
   _attackPatternString: x-x-5-10-15-x-x-50

@@ -16,5 +16,5 @@ MonoBehaviour:
   _enemyName: A Tribal Village
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: 584e4589ac0c1ea4db2cd4764bd1d617, type: 2}
-  _maxHealth: 10
+  _maxHealth: 18
   _attackPatternString: x-1-1-x-1-1-x-x

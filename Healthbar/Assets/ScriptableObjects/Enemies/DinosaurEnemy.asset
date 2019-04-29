@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6703432bf247334382c8792739aa8b4, type: 3}
   m_Name: DinosaurEnemy
   m_EditorClassIdentifier: 
-  _enterSound: {fileID: 8300000, guid: 9698ddf4479600147afa90993c337bce, type: 3}
+  _enterSound: {fileID: 8300000, guid: 439984ffb17eb584c93ce137e8c2744c, type: 3}
   _enemyName: A Dinosaur
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: f91061b9bddede14b8bc9253a6b464eb, type: 2}

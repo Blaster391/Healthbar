@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6703432bf247334382c8792739aa8b4, type: 3}
   m_Name: UnicornEnemy
   m_EditorClassIdentifier: 
-  _enterSound: {fileID: 8300000, guid: 9698ddf4479600147afa90993c337bce, type: 3}
+  _enterSound: {fileID: 8300000, guid: c358bc2fbf6f7114ab458a38897cdc40, type: 3}
   _enemyName: The Last Unicorn
   _enemyDialogue: I am the last of my kind!
   _appearance: {fileID: 11400000, guid: b6c9e65bcd7688546ac8efc906fff715, type: 2}

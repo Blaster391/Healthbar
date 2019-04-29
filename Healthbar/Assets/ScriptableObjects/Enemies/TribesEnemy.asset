@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6703432bf247334382c8792739aa8b4, type: 3}
   m_Name: TribesEnemy
   m_EditorClassIdentifier: 
-  _enterSound: {fileID: 8300000, guid: 9698ddf4479600147afa90993c337bce, type: 3}
+  _enterSound: {fileID: 8300000, guid: c0ba74d2bc7489044b01ef026dc6f27d, type: 3}
   _enemyName: A Tribal Village
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: 584e4589ac0c1ea4db2cd4764bd1d617, type: 2}

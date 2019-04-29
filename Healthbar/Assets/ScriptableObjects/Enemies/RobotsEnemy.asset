@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6703432bf247334382c8792739aa8b4, type: 3}
   m_Name: RobotsEnemy
   m_EditorClassIdentifier: 
-  _enterSound: {fileID: 8300000, guid: 9698ddf4479600147afa90993c337bce, type: 3}
+  _enterSound: {fileID: 8300000, guid: ae895c6a4de9a9341960749cd26202e9, type: 3}
   _enemyName: The Robot Uprising
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: bde18ab90b1e794448ca48e30d5d7956, type: 2}

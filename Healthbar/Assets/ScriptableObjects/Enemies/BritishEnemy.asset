@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6703432bf247334382c8792739aa8b4, type: 3}
   m_Name: BritishEnemy
   m_EditorClassIdentifier: 
-  _enterSound: {fileID: 8300000, guid: 9698ddf4479600147afa90993c337bce, type: 3}
+  _enterSound: {fileID: 8300000, guid: d8bb348e1594ed144b60a7208bd74e70, type: 3}
   _enemyName: The British
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: 57c8408e75fe50a4282b92373895af90, type: 2}

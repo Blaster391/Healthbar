@@ -32,6 +32,7 @@ public class WaveStartManager : MonoBehaviour
     private float _currentAnnouncementTime = 0;
     private float _speechBubbleTime = 0;
     private bool _slideSoundPlayed = false;
+    private bool _slideSoundPlayed2 = false;
     private bool _speechSoundPlayed = false;
     private PlayerScript _player;
     private EnemyScript _enemy;
@@ -131,6 +132,11 @@ public class WaveStartManager : MonoBehaviour
                         _uiSpeechbubble.SetActive(false);
                         if (!_uiMid.IsOnScreen())
                         {
+                            if (!_slideSoundPlayed2)
+                            {
+                                _audioSystem.EnemySlide();
+                                _slideSoundPlayed2 = true;
+                            }
                             _uiMid.SlideIn();
                         }
                         else
@@ -155,6 +161,7 @@ public class WaveStartManager : MonoBehaviour
        // _uiEnemy.MoveOnscreen();
         _speechBubbleTime = _speechTime;
         _slideSoundPlayed = false;
+        _slideSoundPlayed2 = false;
         _speechSoundPlayed = false;
 
         _currentAnnouncementTime = 0;

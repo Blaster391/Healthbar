@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: dfea269f3bbbc3e4fb7fbe9434dca713, type: 3}
   _enemyName: A bunch of Trebuchets
-  _enemyDialogue: 
+  _enemyDialogue: We are the superior siege weapons
   _appearance: {fileID: 11400000, guid: 7b5c93c7cdec3c14eba271ebc1971d3d, type: 2}
   _maxHealth: 15
   _attackPatternString: x-1-x-2-x-1-x-2

@@ -17,7 +17,7 @@ public class BasicBlock : BaseAction
 
     public override string EffectText()
     {
-        return _blockLength.ToString() + "-" + _blockStrength.ToString();
+        return _blockStrength.ToString() + "-" + _blockLength.ToString();
     }
 
     protected override void TriggerCore()

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enterSound: {fileID: 8300000, guid: d08ed71e0c3173f40a9a64d9441962d1, type: 3}
   _enemyName: Climate Change
-  _enemyDialogue: 
+  _enemyDialogue: I hate to say I told you so...
   _appearance: {fileID: 11400000, guid: d9bca4effb05747488eed2431193d955, type: 2}
   _maxHealth: 60
   _attackPatternString: x-x-x-10-x-x-x-25

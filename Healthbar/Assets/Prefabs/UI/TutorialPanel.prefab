@@ -184,7 +184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.148, y: 56.49997}
+  m_AnchoredPosition: {x: 39.996998, y: 56.49997}
   m_SizeDelta: {x: 331.8, y: 103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5539206776059805075
@@ -342,7 +342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.5985, y: -231.3}
+  m_AnchoredPosition: {x: -9.5985, y: -204}
   m_SizeDelta: {x: 437.3, y: 98.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1809016852455970676
@@ -386,7 +386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You Revisit the shop after each Battle
+  m_Text: 'You Revisit the shop after each era
 
     However Different Items will be available each time'
 --- !u!1 &3314220662984477956
@@ -423,7 +423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 0}
+  m_AnchoredPosition: {x: 7, y: 3}
   m_SizeDelta: {x: 1307, y: 68.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1166867964111005716
@@ -502,7 +502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.5995, y: -98.420044}
+  m_AnchoredPosition: {x: -9.5995, y: -79}
   m_SizeDelta: {x: 437.3, y: 98.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1513834718091370428
@@ -667,7 +667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.99, y: 0}
+  m_AnchoredPosition: {x: 5.99, y: 4}
   m_SizeDelta: {x: 111.97, y: 68.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3618805548734126737
@@ -746,7 +746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.151, y: 174}
+  m_AnchoredPosition: {x: 40, y: 174}
   m_SizeDelta: {x: 331.8, y: 103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &570393451898957935
@@ -944,7 +944,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: As you move through the annals of time, travellers may stumble across you
-    and and take you for a monster.
+    and take you for a monster.
 --- !u!1 &7788410183096580683
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,7 +979,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.150997, y: 267.57996}
+  m_AnchoredPosition: {x: 40, y: 267.57996}
   m_SizeDelta: {x: 331.8, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3547359764618700647
@@ -1023,5 +1023,6 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your foes will attack on-beat. See if you can learn their pattern to gain
-    an advantage.
+  m_Text: 'Your foes will attack on-beat.
+
+    See if you can learn their pattern to gain an advantage.'

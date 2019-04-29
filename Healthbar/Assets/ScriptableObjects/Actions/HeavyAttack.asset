@@ -15,5 +15,5 @@ MonoBehaviour:
   _actionName: Heavy Attack
   _patternString: RRRLR
   _cooldown: 3
-  _purchaseCost: 6
-  _damage: 5
+  _purchaseCost: 18
+  _damage: 8

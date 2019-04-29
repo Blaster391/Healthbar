@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionName: Parry
   _patternString: RRL
-  _cooldown: 1
+  _cooldown: 2
   _purchaseCost: 25
   _blockLength: 1
   _blockStrength: 99

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionName: Power Punt
   _patternString: RR
-  _cooldown: 4
+  _cooldown: 2
   _purchaseCost: 10
   _damage: 4

@@ -16,5 +16,5 @@ MonoBehaviour:
   _enemyName: A Peasant Uprising
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: 76e51e7c0bad0d0498408138c33b0f7a, type: 2}
-  _maxHealth: 10
-  _attackPatternString: x-x-x-x-x-x-x-x
+  _maxHealth: 20
+  _attackPatternString: x-1-1-1-x-2-2-2

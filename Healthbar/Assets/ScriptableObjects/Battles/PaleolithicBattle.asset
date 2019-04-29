@@ -22,4 +22,4 @@ MonoBehaviour:
   _purchasableActions:
   - {fileID: 11400000, guid: fc849aac6772a24478e769292f2787d3, type: 2}
   - {fileID: 11400000, guid: 05aa638eef836f743bb4a58db4cc61e3, type: 2}
-  - {fileID: 11400000, guid: 7d9bee137aaa740439e6374187f64fe4, type: 2}
+  - {fileID: 11400000, guid: 33553a17f76c2ca40b29b24ad1179e2b, type: 2}

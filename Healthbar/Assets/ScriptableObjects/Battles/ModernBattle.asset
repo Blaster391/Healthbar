@@ -18,5 +18,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 718e9590a027bec4bae4d57621f52e8e, type: 2}
   - {fileID: 11400000, guid: 7cae967fbcf1df140b1a1a3a20669f9c, type: 2}
   - {fileID: 11400000, guid: bb0c1ed34e614a041b32a41e1e662031, type: 2}
+  - {fileID: 11400000, guid: 63a91a676173a7a4fb69315317c36503, type: 2}
   - {fileID: 11400000, guid: 1308fa1d60d88074abd36f1bcb5c63e2, type: 2}
-  _purchasableActions: []
+  _purchasableActions:
+  - {fileID: 11400000, guid: 548e85c960d0bbf44aa09ad54cd700a1, type: 2}
+  - {fileID: 11400000, guid: 4b7f33994b8f8524e92ef4318cbc1d51, type: 2}
+  - {fileID: 11400000, guid: 20e1cdb09c9967f449a4845d76f4fb27, type: 2}

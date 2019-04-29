@@ -16,5 +16,5 @@ MonoBehaviour:
   _enemyName: A Dinosaur
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: f91061b9bddede14b8bc9253a6b464eb, type: 2}
-  _maxHealth: 10
-  _attackPatternString: x-x-x-x-x-x-x-x
+  _maxHealth: 5
+  _attackPatternString: x-x-3-x-x-3-x-x

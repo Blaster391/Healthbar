@@ -19,4 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4d681ef3551634d4d9d4a2ad885cc7eb, type: 2}
   - {fileID: 11400000, guid: 2341cc3e9c4b770428f15d7895e1360a, type: 2}
   - {fileID: 11400000, guid: 6f654fc1a08d8834a941a774c992092c, type: 2}
-  _purchasableActions: []
+  _purchasableActions:
+  - {fileID: 11400000, guid: 0bea3d65e901fe246846c387061214d1, type: 2}
+  - {fileID: 11400000, guid: 6c7519bb1ef5c4e40897ff95255f57c1, type: 2}
+  - {fileID: 11400000, guid: ce7c69e846d954a4f9db6a1ade8999c1, type: 2}

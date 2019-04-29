@@ -17,4 +17,4 @@ MonoBehaviour:
   _enemyDialogue: BANG
   _appearance: {fileID: 11400000, guid: d9bca4effb05747488eed2431193d955, type: 2}
   _maxHealth: 10
-  _attackPatternString: x-x-x-5-x-x-x-5
+  _attackPatternString: x-x-x-2-x-x-x-2

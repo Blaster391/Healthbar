@@ -16,5 +16,5 @@ MonoBehaviour:
   _enemyName: The Last Unicorn
   _enemyDialogue: I am the last of my kind!
   _appearance: {fileID: 11400000, guid: b6c9e65bcd7688546ac8efc906fff715, type: 2}
-  _maxHealth: 10
-  _attackPatternString: x-x-x-x-x-x-x-x
+  _maxHealth: 20
+  _attackPatternString: x-x-4-x-x-4-x-x

@@ -16,5 +16,5 @@ MonoBehaviour:
   _enemyName: The British
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: 57c8408e75fe50a4282b92373895af90, type: 2}
-  _maxHealth: 10
-  _attackPatternString: x-x-x-x-x-x-x-x
+  _maxHealth: 15
+  _attackPatternString: x-3-x-5-x-3-x-5

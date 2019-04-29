@@ -17,4 +17,4 @@ MonoBehaviour:
   _enemyDialogue: Not you again
   _appearance: {fileID: 11400000, guid: ee6ecbb25fab99043a544ee45bf733c3, type: 2}
   _maxHealth: 10
-  _attackPatternString: x-x-x-x-x-x-x-x
+  _attackPatternString: x-x-1-2-x-x-x-3

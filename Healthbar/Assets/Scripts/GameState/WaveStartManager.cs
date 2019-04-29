@@ -83,7 +83,7 @@ public class WaveStartManager : MonoBehaviour
                 _battleAnnouncementText.text = _battleManager.GetCurrentBattle().BattleName;
 
                 _waveAnnouncementText.text = "Wave " + (_battleManager.WaveNumber + 1 + _battleManager.EndGameCount).ToString() + " / " + _battleManager.GetCurrentBattle().GetNumberOfWaves();
-                if (_battleManager.OnFinalWaveOfBattle())
+                if (_battleManager.AtEndOfGame())
                 {
                     _waveAnnouncementText.text = "Wave " + (_battleManager.WaveNumber + 1 + _battleManager.EndGameCount).ToString() + " / " + "???";
                 }

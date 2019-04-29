@@ -17,4 +17,4 @@ MonoBehaviour:
   _cooldown: 1
   _purchaseCost: 25
   _blockLength: 1
-  _blockStrength: 100
+  _blockStrength: 99

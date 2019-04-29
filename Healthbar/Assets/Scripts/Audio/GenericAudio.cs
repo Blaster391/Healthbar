@@ -7,6 +7,8 @@ public class GenericAudio : MonoBehaviour
     [SerializeField]
     private AudioSource _genericSource;
     [SerializeField]
+    private AudioSource _genericQuietSource;
+    [SerializeField]
     private AudioClip _battleStartSound;
     [SerializeField]
     private AudioClip _shopOpenSound;
@@ -121,8 +123,8 @@ public class GenericAudio : MonoBehaviour
 
     public void EnemySlide()
     {
-        _enemySoundSource.clip = _enemySlideSound;
-        _enemySoundSource.Play();
+        _genericSource.clip = _enemySlideSound;
+        _genericSource.Play();
     }
 
     public void ShopOpen()
@@ -160,8 +162,8 @@ public class GenericAudio : MonoBehaviour
 
     public void ButtonSuccess()
     {
-        _genericSource.clip = _buttonSuccessSound;
-        _genericSource.Play();
+        _genericQuietSource.clip = _buttonSuccessSound;
+        _genericQuietSource.Play();
     }
 
     public void ButtonFailed()

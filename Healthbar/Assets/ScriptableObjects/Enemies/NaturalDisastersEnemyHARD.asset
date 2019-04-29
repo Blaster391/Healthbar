@@ -16,5 +16,5 @@ MonoBehaviour:
   _enemyName: Climate Change
   _enemyDialogue: 
   _appearance: {fileID: 11400000, guid: d9bca4effb05747488eed2431193d955, type: 2}
-  _maxHealth: 50
+  _maxHealth: 60
   _attackPatternString: x-x-x-10-x-x-x-25

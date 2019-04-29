@@ -152,7 +152,6 @@ public class WaveStartManager : MonoBehaviour
         _speechSoundPlayed = false;
 
         _currentAnnouncementTime = 0;
-        _speechBubbleTime = 0;
 
         _audioSystem.BattleStart();
     }

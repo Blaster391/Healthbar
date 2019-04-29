@@ -42,13 +42,13 @@ public class ShoppingStateManager : MonoBehaviour
                 ShoppingDone();
             }
 
-            _doneButton.SetActive(_actionController.Actions.Count > 0);
+            _doneButton.SetActive(_actionController.Actions.Count >= 2);
         }
     }
 
     public void ShoppingDone()
     {
-        if(_actionController.Actions.Count == 0)
+        if(_actionController.Actions.Count < 2)
         {
             return;
         }

@@ -48,7 +48,7 @@ public class GameTimeManager : MonoBehaviour
     private bool _doneHalfTick = false;
     void Update()
     {
-        if(GameMaster.Find<GameMaster>().CurrentState != GameState.Battling)
+        if(GameMaster.Find<GameMaster>().CurrentState != GameState.Battling || GameMaster.Find<GameMaster>().Paused)
         {
             return;
         }

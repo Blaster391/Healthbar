@@ -80,7 +80,13 @@ public class WaveStartManager : MonoBehaviour
                _currentAnnouncementTime += Time.deltaTime;
 
                 _battleAnnouncementText.text = _battleManager.GetCurrentBattle().BattleName;
-                _waveAnnouncementText.text = "Wave " + (_battleManager.WaveNumber + 1).ToString();
+
+                _waveAnnouncementText.text = "Wave " + (_battleManager.WaveNumber + 1 + _battleManager.EndGameCount).ToString() + " / " + _battleManager.GetCurrentBattle().GetNumberOfWaves();
+                if (_battleManager.OnFinalWaveOfBattle())
+                {
+                    _waveAnnouncementText.text = "Wave " + (_battleManager.WaveNumber + 1 + _battleManager.EndGameCount).ToString() + " / " + "???";
+                }
+
 
                 var textColour = _battleAnnouncementText.color;
                 textColour.a = alpha;

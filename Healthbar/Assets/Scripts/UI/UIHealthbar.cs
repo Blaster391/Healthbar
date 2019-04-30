@@ -29,7 +29,7 @@ public class UIHealthbar : MonoBehaviour
     void Start()
     {
         _startingOffset = _bar.gameObject.transform.position.x;
-        _width = _bar.rectTransform.rect.width;
+        _width = _bar.rectTransform.rect.width * ((float)Screen.width /1080);
     }
 
     void UpdateHealths()
@@ -58,10 +58,10 @@ public class UIHealthbar : MonoBehaviour
         _healthText.text = _currentHealth.ToString();
 
         float distance =  _endingOffset;
-        float percentageHealth = (float)_currentHealth / _maxHealth;
+        float percentageHealth = (float)_currentHealth / (float)_maxHealth;
 
         Vector3 pos = _bar.gameObject.transform.position;
-        pos.x = _startingOffset + (1 - percentageHealth) * _width * distance;
+        pos.x = _startingOffset + ((1 - percentageHealth) * _width) * distance;
         _bar.gameObject.transform.position = pos;
     }
 }

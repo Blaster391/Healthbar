@@ -7,6 +7,7 @@ public class UIHealthbar : MonoBehaviour
 {
 
     private float _startingOffset;
+    private float _width;
 
     [SerializeField]
     private Text _healthText;
@@ -28,7 +29,7 @@ public class UIHealthbar : MonoBehaviour
     void Start()
     {
         _startingOffset = _bar.gameObject.transform.position.x;
-
+        _width = _bar.rectTransform.rect.width;
     }
 
     void UpdateHealths()
@@ -60,7 +61,7 @@ public class UIHealthbar : MonoBehaviour
         float percentageHealth = (float)_currentHealth / _maxHealth;
 
         Vector3 pos = _bar.gameObject.transform.position;
-        pos.x = _startingOffset + (1 - percentageHealth) * distance;
+        pos.x = _startingOffset + (1 - percentageHealth) * _width * distance;
         _bar.gameObject.transform.position = pos;
     }
 }
